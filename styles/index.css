@@ -1,0 +1,38 @@
+/* index.css 메인화면 작업 */
+/* header */
+body, html {}
+header {
+    display:flex; justify-content:space-between;
+    align-items:center;
+    padding:0 70px;
+}
+header h1 {}
+header h1 a {}
+header h1 a img {}
+header nav {}
+header nav .gnb {
+    background-color:pink;
+    display:flex;
+}
+header nav .gnb li {
+    padding:0 25px;
+}
+header nav .gnb li a {
+    font-size:1.063rem;
+    font-weight:500;
+}
+header .right_menu {
+    display:inline;
+    align-items:center;
+    background-color: aqua;
+}
+header .right_menu .search {
+    background:lime;
+}
+header .right_menu .search .product_name {}
+header .right_menu .search .icon_search {}
+header .right_menu #login {}
+header .right_menu #join {}
+header .right_menu .cart {}
+header .right_menu .cart a {}
+header .right_menu .cart a {}
