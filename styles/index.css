@@ -1,38 +1,64 @@
 /* index.css 메인화면 작업 */
 /* header */
 body, html {}
+/* -----------------------------------------header start */
 header {
+    position:relative;
+    background-color: palevioletred;
+    width:100%;
+    min-width:1200px;
+    height:76px;
+    padding:0 70px;
     display:flex; justify-content:space-between;
     align-items:center;
-    padding:0 70px;
 }
-header h1 {}
+/* ---------------------------------logo */
+header h1 {
+    
+}
 header h1 a {}
 header h1 a img {}
-header nav {}
+/* ---------------------------------nav */
+header nav {position: absolute; left: 50%; transform: translateX(-50%);}
 header nav .gnb {
-    background-color:pink;
-    display:flex;
+    display:flex; flex-flow:row nowrap;
 }
-header nav .gnb li {
-    padding:0 25px;
+header nav .gnb > li {
+    margin:0 25px;
 }
-header nav .gnb li a {
+header nav .gnb > li > a {
+    background-color: skyblue;
+    height:76px;
+    display:block;
+    line-height:76px;
     font-size:1.063rem;
     font-weight:500;
 }
+/* ---------------------------------right menu */
 header .right_menu {
-    display:inline;
+    display:flex; flex-flow:row nowrap;
+    gap:17px;
     align-items:center;
-    background-color: aqua;
 }
-header .right_menu .search {
-    background:lime;
+header .right_menu li {}
+header .right_menu li:first-child {
+    background:#ededed;
+    overflow: hidden;
+    padding:5px 10px;
+    display:flex; align-items:center;/* 수평맞춤 */
+    width:185px;
 }
-header .right_menu .search .product_name {}
-header .right_menu .search .icon_search {}
-header .right_menu #login {}
-header .right_menu #join {}
-header .right_menu .cart {}
-header .right_menu .cart a {}
-header .right_menu .cart a {}
+header .right_menu li:first-child #product_name {background:lime; margin-right:10px; font-size:0.875rem; width:100%;}
+header .right_menu li:first-child a {background-color:aquamarine;}
+header .right_menu li:first-child a img {}
+header .right_menu li a  {background-color:aquamarine;}
+header .right_menu li:nth-child(2)::after  {content: '|'; margin-left:16px;}
+header .right_menu li:nth-child(3)::after  {content: '|'; margin-left:16px;}
+header .right_menu li:last-child a  {background-color:aquamarine; display:flex; align-items:center;/* 수평맞춤 */}
+header .right_menu li:last-child a span  {background-color:blue;}
+header .right_menu li:last-child a img  { margin-left:5px;}
+/* -----------------------------------------header end */
+/* -----------------------------------------main start */
+/* ------------------------1행 */
+
+/* -----------------------------------------main end */

@@ -26,24 +26,69 @@
                 <li><a href="#">세일</a></li>
             </ul>
         </nav>
-        <!-- 오른쪽 메뉴(로그인, 검색 등등..) -->
-        <div class="right_menu">
-            <!-- 검색 -->
-            <div class="search">
-                <input type="text" id="product_name" name="product_name" placeholder="#여름신상">
-                <button type="button" id="icon_search"><img src="./images/icon_search.png" alt="검색하기"></button>
-            </div>
-            <!-- 로그인 -->
-            <a href="#" id="login">로그인</a>
-            <!-- 회원가입 -->
-            <a href="#" id="join">회원가입</a>
-            <!-- 장바구니 -->
-            <div class="cart">
-                <a href="#">장바구니 <img src="./images/icon_cart.png" alt=""></a>
-            </div>
-        </div>
+        <ul class="right_menu">
+            <li>
+                <input type="text" id="product_name" name="product_name" placeholder="#여름세일">
+                <a href="#"><img src="./images/icon_search.png" alt="검색하기"></a>
+            </li>
+            <li>
+                <a href="#">로그인</a>
+            </li>
+            <li>
+                <a href="#">회원가입</a>
+            </li>
+            <li>
+                <a href="#"><span>장바구니</span><img src="./images/icon_cart.png" alt="장바구니 보기"></a>
+            </li>
+        </ul>
     </header>
-    <main></main>
+    <main>
+        <!-- 1행 -->
+        <section class="swiper_container">
+            <!-- 좌우 방향 버튼 -->
+            <div class="page_btn">
+                <button type="button" id="#left" name="btn_left"><img src="./images/icon_left.png" alt=""></button>
+                <button type="button" id="#right" name="btn_right"><img src="./images/icon_right.png" alt=""></button>
+            </div>
+            <!-- 페이지 번호 -->
+            <div class="page_box">
+                <div class="number">
+                    <span class="cure">01</span>
+                    <span class="total">03</span>
+                </div>
+                <div class="bar">
+                    
+                </div>
+            </div>
+            <!-- 광고이미지 -->
+            <div class="swiper_wrapper">
+                <a href="#" class="swiper_slide slide1">
+                    <h2>To the Mountain</h2>
+                    <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                    <img src="./images/btn_more.png" alt="">
+                </a>
+                <a href="#" class="swiper_slide slide2">
+                    <h2>To the Mountain</h2>
+                    <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                    <img src="./images/btn_more.png" alt="">
+                </a>
+                <a href="#" class="swiper_slide slide3">
+                    <h2>To the Mountain</h2>
+                    <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                    <img src="./images/btn_more.png" alt="">
+                </a>
+            </div>
+        </section>
+        <!-- 2행 -->
+        <!-- 3행 -->
+        <!-- 4행 -->
+        <!-- 5행 -->
+        <!-- 6행 -->
+        <!-- 7행 -->
+        <!-- 8행 -->
+        <!-- 9행 -->
+        <!-- 10행 -->
+    </main>
     <footer></footer>
 </body>
 </html>
