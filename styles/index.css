@@ -1,11 +1,10 @@
 /* index.css 메인화면 작업 */
 /* header */
-body, html {}
+body, html {margin:0; padding:0;}
 /* -----------------------------------------header start */
 header {
     position:relative;
-    background-color: palevioletred;
-    width:100%;
+    max-width:100%;
     min-width:1200px;
     height:76px;
     padding:0 70px;
@@ -24,41 +23,117 @@ header nav .gnb {
     display:flex; flex-flow:row nowrap;
 }
 header nav .gnb > li {
-    margin:0 25px;
+    
 }
 header nav .gnb > li > a {
-    background-color: skyblue;
-    height:76px;
-    display:block;
+    padding:25px;
     line-height:76px;
     font-size:1.063rem;
     font-weight:500;
 }
 /* ---------------------------------right menu */
 header .right_menu {
-    display:flex; flex-flow:row nowrap;
-    gap:17px;
+    display:flex;
     align-items:center;
 }
-header .right_menu li {}
+header .right_menu li {
+    display:flex;
+    align-items: center;
+    margin-right:17px;
+}
+/* ---------------------검색 */
 header .right_menu li:first-child {
     background:#ededed;
-    overflow: hidden;
-    padding:5px 10px;
-    display:flex; align-items:center;/* 수평맞춤 */
-    width:185px;
+    padding:5px 10px;;
 }
-header .right_menu li:first-child #product_name {background:lime; margin-right:10px; font-size:0.875rem; width:100%;}
-header .right_menu li:first-child a {background-color:aquamarine;}
+header .right_menu li:first-child #product_name {
+    background:none;
+    width: 131px;
+    margin-right:10px;
+    font-size:0.875rem;
+}
+header .right_menu li:first-child a {}
 header .right_menu li:first-child a img {}
-header .right_menu li a  {background-color:aquamarine;}
-header .right_menu li:nth-child(2)::after  {content: '|'; margin-left:16px;}
-header .right_menu li:nth-child(3)::after  {content: '|'; margin-left:16px;}
-header .right_menu li:last-child a  {background-color:aquamarine; display:flex; align-items:center;/* 수평맞춤 */}
-header .right_menu li:last-child a span  {background-color:blue;}
-header .right_menu li:last-child a img  { margin-left:5px;}
+/* ---------------------로그인 */
+header .right_menu li a {
+    font-size:0.875rem;
+}
+header .right_menu li:nth-child(2)::after {
+    content: '|';
+    margin-left:17px;
+}
+/* ---------------------회원가입 */
+header .right_menu li:nth-child(3)::after {
+    content: '|';
+    margin-left:17px;
+}
+/* ---------------------장바구니 */
+header .right_menu li:last-child {margin-right:0;}
+header .right_menu li:last-child a {
+    display:flex;
+    align-items:center;
+}
+header .right_menu li:last-child a span {}
+header .right_menu li:last-child a img {margin-left:5px;}
 /* -----------------------------------------header end */
 /* -----------------------------------------main start */
 /* ------------------------1행 */
-
+main {}
+main .swiper_container {
+    background:pink;
+    width:100vw; height:796px;
+    text-align: center;
+    overflow:hidden;
+    position:relative;
+}
+main .swiper_container .page_btn {
+    position:absolute;
+    top: 50%;
+    width: 100%;
+}
+main .swiper_container .page_btn button {
+    position:absolute;
+}
+main .swiper_container .page_btn button[name="btn_left"] {
+    left:20px;
+}
+main .swiper_container .page_btn button[name="btn_right"] {
+    right:20px;
+}
+main .swiper_container .page_btn #left {}
+main .swiper_container .page_btn #left img {}
+main .swiper_container .page_btn #right {}
+main .swiper_container .page_btn #right img {}
+main .swiper_container .page_box {}
+main .swiper_container .page_box .number {}
+main .swiper_container .page_box .number .span {}
+main .swiper_container .swiper_wrapper {
+    width:100%; height:100%;
+}
+main .swiper_container .swiper_wrapper .swiper_slide {
+    position:absolute;
+    top: 50%;
+    width:100%;
+}
+main .swiper_container .swiper_wrapper .swiper_slide .txt {
+    margin-bottom:80px;
+}
+main .swiper_container .swiper_wrapper .swiper_slide .txt h2 {
+    font-weight:700;
+    font-size:2.813rem;
+    margin-bottom:16px;
+}
+main .swiper_container .swiper_wrapper .swiper_slide .txt p {}
+main .swiper_container .swiper_wrapper .swiper_slide img {
+    width:129px;
+}
+main .swiper_container .swiper_wrapper .slide1 {
+    background:url(../images/img_ad_001.png);
+}
+main .swiper_container .swiper_wrapper .slide2 {
+    background:url(../images/img_ad_001.png);
+}
+main .swiper_container .swiper_wrapper .slide3 {
+    background:url(../images/img_ad_001.png);
+}
 /* -----------------------------------------main end */

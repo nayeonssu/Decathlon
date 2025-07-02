@@ -14,7 +14,7 @@
     <header>
         <!-- 로고 -->
         <h1><a href="./styles/index.html"><img src="./images/logo.png" alt="decatlone"></a></h1>
-        <!-- 중간 메뉴 -->
+        <!-- 중간 -->
         <nav>
             <ul class="gnb">
                 <li><a href="#">신제품</a></li><!-- lnb bg를 묶어주는 div 먼저 한 다음 ul li 들어감 -->
@@ -26,6 +26,7 @@
                 <li><a href="#">세일</a></li>
             </ul>
         </nav>
+        <!-- 오른쪽 메뉴뉴 -->
         <ul class="right_menu">
             <li>
                 <input type="text" id="product_name" name="product_name" placeholder="#여름세일">
@@ -44,40 +45,53 @@
     </header>
     <main>
         <!-- 1행 -->
-        <section class="swiper_container">
-            <!-- 좌우 방향 버튼 -->
-            <div class="page_btn">
-                <button type="button" id="#left" name="btn_left"><img src="./images/icon_left.png" alt=""></button>
-                <button type="button" id="#right" name="btn_right"><img src="./images/icon_right.png" alt=""></button>
+        <section>
+            <!-- 스와이프 이미지 -->
+            <div class="swiper" id="best"><!-- 보여지는 영역 -->
+                <div class="swiper_wrapper"><!-- 이미지를 묶은 그룹 -->
+                    <div class="swiper-slide slide1"></div> 
+                    <div class="swiper-slide slide1"></div> 
+                    <div class="swiper-slide slide1"></div> 
+                    <div class="swiper-slide slide1"></div> 
+                </div>
+                <!-- 좌우 방향 버튼 -->
+                <div class="swiper-btn-prev"></div>
+                <div class="swiper-btn-next"></div>
             </div>
             <!-- 페이지 번호 -->
             <div class="page_box">
                 <div class="number">
-                    <span class="cure">01</span>
-                    <span class="total">03</span>
+                    <span>01</span>
+                    <span>03</span>
                 </div>
                 <div class="bar">
                     
                 </div>
             </div>
             <!-- 광고이미지 -->
-            <div class="swiper_wrapper">
+            <!-- <div class="swiper_wrapper">
                 <a href="#" class="swiper_slide slide1">
-                    <h2>To the Mountain</h2>
-                    <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                    <div class="txt">
+                        <h2>To the Mountain</h2>
+                        <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                    </div>
                     <img src="./images/btn_more.png" alt="">
                 </a>
                 <a href="#" class="swiper_slide slide2">
-                    <h2>To the Mountain</h2>
-                    <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                    <div class="txt">
+                        <h2>To the Mountain</h2>
+                        <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                    </div>
                     <img src="./images/btn_more.png" alt="">
                 </a>
                 <a href="#" class="swiper_slide slide3">
-                    <h2>To the Mountain</h2>
-                    <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                    <div class="txt">
+                        <h2>To the Mountain</h2>
+                        <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                    </div>
                     <img src="./images/btn_more.png" alt="">
                 </a>
-            </div>
+            </div> -->
         </section>
         <!-- 2행 -->
         <!-- 3행 -->
