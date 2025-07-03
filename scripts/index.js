@@ -10,3 +10,6 @@ const bestSwiper = new Swiper('#best',{
         nextEl:'.swiper-button-next',
     },
 })
+/* -----------------------2행 상품 */
+const container = document.querySelector('.container');
+console.log(container);

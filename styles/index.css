@@ -77,8 +77,8 @@ header .right_menu li:last-child a span {}
 header .right_menu li:last-child a img {margin-left:5px;}
 /* -----------------------------------------header end */
 /* -----------------------------------------main start */
-#ad {position:relative; margin:0 70px;}
 /* ------------------------1행 swiper */
+#ad {position:relative; margin:0 70px;}
 #best {width:100%; height:768px;}
 #best .swiper-wrapper {}
 #best .swiper-wrapper .swiper-slide {
@@ -98,8 +98,8 @@ header .right_menu li:last-child a img {margin-left:5px;}
 #best .swiper-wrapper .swiper-slide img {
     margin-top:88px;
 }
-#best .swiper-wrapper .slide1 {background:url(../images/img_ad_001.png);}
-#best .swiper-wrapper .slide2 {background:url(../images/img_ad_002.jpg);}
+#best .swiper-wrapper .slide1 {background:url(../images/img_ad_001.png) left;}
+#best .swiper-wrapper .slide2 {background:url(../images/img_ad_002.jpg) left;}
 #best .swiper-wrapper .slide3 {background-color:pink;}
 #best .swiper-wrapper .slide4 {background-color:green;}
 /* ---------화살표 좌 우 방향 작성 */
@@ -112,5 +112,20 @@ header .right_menu li:last-child a img {margin-left:5px;}
 }
 #best .swiper-button-prev::after,
 #best .swiper-button-next::after {display:none;}
-
+/* -----------------------2행 */
+#new {text-align:center; padding:100px 70px;}
+#new h3 {font-size:2.375rem; font-weight: 700;}
+#new .category {
+    display:flex; justify-content:center;
+    margin:40px 0;
+}
+#new .category li {}
+#new .category li .gender {
+    padding:10px 20px;
+    height:40px;
+    
+}
+#new .category li:first-child .gender {
+    border-bottom:1px solid #000;
+}
 /* -----------------------------------------main end */
