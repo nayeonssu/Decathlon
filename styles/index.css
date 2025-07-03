@@ -77,63 +77,40 @@ header .right_menu li:last-child a span {}
 header .right_menu li:last-child a img {margin-left:5px;}
 /* -----------------------------------------header end */
 /* -----------------------------------------main start */
-/* ------------------------1행 */
-main {}
-main .swiper_container {
-    background:pink;
-    width:100vw; height:796px;
-    text-align: center;
-    overflow:hidden;
-    position:relative;
+#ad {position:relative; margin:0 70px;}
+/* ------------------------1행 swiper */
+#best {width:100%; height:768px;}
+#best .swiper-wrapper {}
+#best .swiper-wrapper .swiper-slide {
+    display:flex;
+    flex-flow:column nowrap;/* 요소의 방향 위 -> 아래 */
+    justify-content:center;/* 세로중앙 정렬 */
+    align-items:center;/* 가로중앙 정렬 */
 }
-main .swiper_container .page_btn {
-    position:absolute;
-    top: 50%;
-    width: 100%;
-}
-main .swiper_container .page_btn button {
-    position:absolute;
-}
-main .swiper_container .page_btn button[name="btn_left"] {
-    left:20px;
-}
-main .swiper_container .page_btn button[name="btn_right"] {
-    right:20px;
-}
-main .swiper_container .page_btn #left {}
-main .swiper_container .page_btn #left img {}
-main .swiper_container .page_btn #right {}
-main .swiper_container .page_btn #right img {}
-main .swiper_container .page_box {}
-main .swiper_container .page_box .number {}
-main .swiper_container .page_box .number .span {}
-main .swiper_container .swiper_wrapper {
-    width:100%; height:100%;
-}
-main .swiper_container .swiper_wrapper .swiper_slide {
-    position:absolute;
-    top: 50%;
-    width:100%;
-}
-main .swiper_container .swiper_wrapper .swiper_slide .txt {
-    margin-bottom:80px;
-}
-main .swiper_container .swiper_wrapper .swiper_slide .txt h2 {
+#best .swiper-wrapper .swiper-slide h2 {
     font-weight:700;
     font-size:2.813rem;
-    margin-bottom:16px;
+    margin:16px;
 }
-main .swiper_container .swiper_wrapper .swiper_slide .txt p {}
-main .swiper_container .swiper_wrapper .swiper_slide img {
-    width:129px;
+#best .swiper-wrapper .swiper-slide p {
+    font-size:1.25rem;
 }
-main .swiper_container .swiper_wrapper .slide1 {
-    background:url(../images/img_ad_001.png);
+#best .swiper-wrapper .swiper-slide img {
+    margin-top:88px;
 }
-main .swiper_container .swiper_wrapper .slide2 {
-    background:url(../images/img_ad_001.png);
+#best .swiper-wrapper .slide1 {background:url(../images/img_ad_001.png);}
+#best .swiper-wrapper .slide2 {background:url(../images/img_ad_002.jpg);}
+#best .swiper-wrapper .slide3 {background-color:pink;}
+#best .swiper-wrapper .slide4 {background-color:green;}
+/* ---------화살표 좌 우 방향 작성 */
+#best .swiper-button-prev {background:url(../images/icon_left.png); position: relative; left:0;}
+#best .swiper-button-next {background:url(../images/icon_right.png);position: relative; right:0;}
+#best .swiper-button-prev,
+#best .swiper-button-next {
+    width:50px; height:50px;
+    position:absolute;
 }
-main .swiper_container .swiper_wrapper .slide3 {
-    background:url(../images/img_ad_001.png);
-}
+#best .swiper-button-prev::after,
+#best .swiper-button-next::after {display:none;}
+
 /* -----------------------------------------main end */

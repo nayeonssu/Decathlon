@@ -6,8 +6,15 @@
     <meta name="kiyword" content='스포츠, 스포츠의류, SPORTS, Sports, sports, 수영복, 테니스, 등산, 축구, 서핑, 러닝'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>데카트론</title>
+    <!-- 플러그인 필수 css 연결 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link href="./styles/reset.css" rel="stylesheet">
     <link href="./styles/index.css" rel="stylesheet">
+    <script src="./scripts/index.js" defer></script>
     
 </head>
 <body>
@@ -26,7 +33,7 @@
                 <li><a href="#">세일</a></li>
             </ul>
         </nav>
-        <!-- 오른쪽 메뉴뉴 -->
+        <!-- 오른쪽 메뉴 -->
         <ul class="right_menu">
             <li>
                 <input type="text" id="product_name" name="product_name" placeholder="#여름세일">
@@ -45,55 +52,73 @@
     </header>
     <main>
         <!-- 1행 -->
-        <section>
+        <section id="ad">
             <!-- 스와이프 이미지 -->
             <div class="swiper" id="best"><!-- 보여지는 영역 -->
-                <div class="swiper_wrapper"><!-- 이미지를 묶은 그룹 -->
-                    <div class="swiper-slide slide1"></div> 
-                    <div class="swiper-slide slide1"></div> 
-                    <div class="swiper-slide slide1"></div> 
-                    <div class="swiper-slide slide1"></div> 
+                <div class="swiper-wrapper"><!-- 이미지를 묶은 그룹 -->
+                    <a href="#" class="swiper-slide slide1">
+                        <h2>To the Mountain</h2>
+                        <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                        <img src="./images/btn_more.png" alt="">
+                    </a> 
+                    <a href="#" class="swiper-slide slide2">
+                        <h2>To the Mountain</h2>
+                        <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                        <img src="./images/btn_more.png" alt="">
+                    </a> 
+                    <a href="#" class="swiper-slide slide3">
+                        <h2>To the Mountain</h2>
+                        <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                        <img src="./images/btn_more.png" alt="">
+                    </a> 
+                    <a href="#" class="swiper-slide slide4">
+                        <h2>To the Mountain</h2>
+                        <p>여름 등산을 위한 기능성 의류 컬렉션</p>
+                        <img src="./images/btn_more.png" alt="">
+                    </a> 
                 </div>
                 <!-- 좌우 방향 버튼 -->
-                <div class="swiper-btn-prev"></div>
-                <div class="swiper-btn-next"></div>
+                <div class="swiper-button-prev"></div><!-- button 명칭 줄이지 말자 -->
+                <div class="swiper-button-next"></div>
             </div>
-            <!-- 페이지 번호 -->
-            <div class="page_box">
-                <div class="number">
-                    <span>01</span>
-                    <span>03</span>
-                </div>
-                <div class="bar">
-                    
-                </div>
-            </div>
-            <!-- 광고이미지 -->
-            <!-- <div class="swiper_wrapper">
-                <a href="#" class="swiper_slide slide1">
-                    <div class="txt">
-                        <h2>To the Mountain</h2>
-                        <p>여름 등산을 위한 기능성 의류 컬렉션</p>
-                    </div>
-                    <img src="./images/btn_more.png" alt="">
-                </a>
-                <a href="#" class="swiper_slide slide2">
-                    <div class="txt">
-                        <h2>To the Mountain</h2>
-                        <p>여름 등산을 위한 기능성 의류 컬렉션</p>
-                    </div>
-                    <img src="./images/btn_more.png" alt="">
-                </a>
-                <a href="#" class="swiper_slide slide3">
-                    <div class="txt">
-                        <h2>To the Mountain</h2>
-                        <p>여름 등산을 위한 기능성 의류 컬렉션</p>
-                    </div>
-                    <img src="./images/btn_more.png" alt="">
-                </a>
-            </div> -->
         </section>
         <!-- 2행 -->
+        <section id="new">
+            <h3>신상으로 완성하는 퍼포먼스</h3>
+            <ul class="category">
+                <li>
+                    <button type="button" class="gender">남성</button>
+                </li>
+                <li>
+                    <button type="button" class="gender">여성</button>
+                </li>
+                <li>
+                    <button type="button" class="gender">아동</button>
+                </li>
+                <li>
+                    <button type="button" class="gender">스포츠</button>
+                </li>
+            </ul>
+            <ul class="container">
+                <li>
+                    <a href="#" class="img">
+                        <!-- 컬러칩 -->
+                        <div class="color">
+                            <img src="" alt="">
+                        </div>
+                        <!-- 장바구니 넣기 -->
+                        <button type="button" class="in_cart"><img src="./images/icon_cart_save.png" alt=""></button>
+                    </a>
+                    <!-- 제품이름 -->
+                    <div class="name">
+                        <a href="#">DECATHLON</a>
+                        <a href="#">남성 러닝 반팔 티 런 드라이 100</a>
+                    </div>
+                    <!-- 가격 -->
+                    <p>9,900</p>
+                </li>
+            </ul>
+        </section>
         <!-- 3행 -->
         <!-- 4행 -->
         <!-- 5행 -->
