@@ -9,7 +9,19 @@ const bestSwiper = new Swiper('#best',{
         prevEl:'.swiper-button-prev',
         nextEl:'.swiper-button-next',
     },
+    pagination: {
+        el: '.swiper-pagination',
+        //type:'bullets'(기본)
+        //type:'fraction' (숫자)
+        //type:'progressbar' (바)
+        type:'fraction',
+    },
 })
 /* -----------------------2행 상품 */
-const container = document.querySelector('.container');
-console.log(container);
+/* 상품 스와이퍼 */
+const newSwiper = new Swiper('#new_product',{
+    direction:'horizontal',
+    slidesPerView:5,
+    centerSlider:true,
+})
+/* 반복 데이터 */

@@ -11,16 +11,16 @@ header {
     display:flex; justify-content:space-between;
     align-items:center;
 }
-/* ---------------------------------logo */
+/* 로고*/
 header h1 {
     
 }
 header h1 a {}
 header h1 a img {}
-/* ---------------------------------nav */
+/* nav 중앙메뉴 */
 header nav {position: absolute; left: 50%; transform: translateX(-50%);}
 header nav .gnb {
-    display:flex; flex-flow:row nowrap;
+    display:flex;
 }
 header nav .gnb > li {
     
@@ -31,7 +31,7 @@ header nav .gnb > li > a {
     font-size:1.063rem;
     font-weight:500;
 }
-/* ---------------------------------right menu */
+/* 회원정보(검색, 로그인, 회원가입, 장바구니) */
 header .right_menu {
     display:flex;
     align-items:center;
@@ -41,43 +41,47 @@ header .right_menu li {
     align-items: center;
     margin-right:17px;
 }
-/* ---------------------검색 */
+/* 검색 */
 header .right_menu li:first-child {
     background:#ededed;
     padding:5px 10px;;
 }
-header .right_menu li:first-child #product_name {
+header .right_menu li #product_name {
     background:none;
     width: 131px;
     margin-right:10px;
-    font-size:0.875rem;
+    font-size:0.814rem;
 }
 header .right_menu li:first-child a {}
 header .right_menu li:first-child a img {}
-/* ---------------------로그인 */
-header .right_menu li a {
+/* 로그인 */
+header .right_menu li #login {
     font-size:0.875rem;
 }
 header .right_menu li:nth-child(2)::after {
     content: '|';
     margin-left:17px;
 }
-/* ---------------------회원가입 */
+/* 회원가입 */
+header .right_menu li #join {
+    font-size:0.875rem;
+}
 header .right_menu li:nth-child(3)::after {
     content: '|';
     margin-left:17px;
 }
-/* ---------------------장바구니 */
+/* 장바구니 */
 header .right_menu li:last-child {margin-right:0;}
-header .right_menu li:last-child a {
+header .right_menu li #cart {
     display:flex;
     align-items:center;
 }
-header .right_menu li:last-child a span {}
-header .right_menu li:last-child a img {margin-left:5px;}
+header .right_menu li #cart span {}
+header .right_menu li #cart img {margin-left:5px;}
 /* -----------------------------------------header end */
+
 /* -----------------------------------------main start */
-/* ------------------------1행 swiper */
+/* ------------------------1행*/
 #ad {position:relative; margin:0 70px;}
 #best {width:100%; height:768px;}
 #best .swiper-wrapper {}
@@ -102,7 +106,7 @@ header .right_menu li:last-child a img {margin-left:5px;}
 #best .swiper-wrapper .slide2 {background:url(../images/img_ad_002.jpg) left;}
 #best .swiper-wrapper .slide3 {background-color:pink;}
 #best .swiper-wrapper .slide4 {background-color:green;}
-/* ---------화살표 좌 우 방향 작성 */
+/* 화살표 좌 우 방향 작성 */
 #best .swiper-button-prev {background:url(../images/icon_left.png); position: relative; left:0;}
 #best .swiper-button-next {background:url(../images/icon_right.png);position: relative; right:0;}
 #best .swiper-button-prev,
@@ -112,20 +116,61 @@ header .right_menu li:last-child a img {margin-left:5px;}
 }
 #best .swiper-button-prev::after,
 #best .swiper-button-next::after {display:none;}
+
 /* -----------------------2행 */
-#new {text-align:center; padding:100px 70px;}
-#new h3 {font-size:2.375rem; font-weight: 700;}
-#new .category {
-    display:flex; justify-content:center;
-    margin:40px 0;
-}
+#new {background:aquamarine; text-align:center; width:100%; height:927px; padding:100px 0;}
+#new h3 {font-size:2.375rem; font-weight:700; background:green;}
+/* 카테고리 영역 */
+#new .category {display:flex; justify-content:center; margin:40px 0; background:hotpink;}
 #new .category li {}
-#new .category li .gender {
-    padding:10px 20px;
-    height:40px;
-    
+#new .category li .gender {font-size:1.25rem; font-weight:500; padding:10px 20px;}
+#new .category li:first-child .gender {border-bottom:1px solid #000;}
+/* 상품 스와이프 영역 */
+#new .container {}
+#new .container #new_product {}
+#new .container #new_product .swiper-wrapper {}
+/* ----상품 공통 선택자 */
+#new .container #new_product .swiper-wrapper .swiper-slide {
+    height:470px;
 }
-#new .category li:first-child .gender {
-    border-bottom:1px solid #000;
+#new .container #new_product .swiper-wrapper .swiper-slide .pd_img {}
+
+#new .container #new_product .swiper-wrapper .swiper-slide .pd_img p {
+    width:59px; line-height:27px;
+    font-size:0.813rem;
+    color:#fff;
+    background:#3642B8;
 }
+/* 제품컬러 */
+#new .container #new_product .swiper-wrapper .swiper-slide .pd_img .color_chips  {
+    display:flex; gap:7px;
+}
+#new .container #new_product .swiper-wrapper .swiper-slide .pd_img .color_chips .circle  {
+    width: 14px; height: 14px;
+    background-color:black;
+    border-radius:50px;
+}
+/* 장바구니 넣기 */
+#new .container #new_product .swiper-wrapper .swiper-slide .pd_img .like {}
+#new .container #new_product .swiper-wrapper .swiper-slide .pd .like img {}
+/* 제품이름 */
+#new .container #new_product .swiper-wrapper .swiper-slide .name {
+    text-align: left;
+}
+#new .container #new_product .swiper-wrapper .swiper-slide .name .brand {}
+#new .container #new_product .swiper-wrapper .swiper-slide .name .pd_name {}
+#new .container #new_product .swiper-wrapper .swiper-slide .sale_price {}
+/* 제품가격 */
+#new .container #new_product .swiper-wrapper .swiper-slide .sale_price span {}
+/* ----상품 개별 선택자 */
+#new .container #new_product .swiper-wrapper .slide1 {background:orange;}
+#new .container #new_product .swiper-wrapper .slide2 {}
+#new .container #new_product .swiper-wrapper .slide3 {}
+#new .container #new_product .swiper-wrapper .slide4 {}
+#new .container #new_product .swiper-wrapper .slide5 {}
+#new .container #new_product .swiper-wrapper .slide6 {}
+#new .container #new_product .swiper-wrapper .slide7 {}
+#new .container #new_product .swiper-wrapper .slide8 {}
+/* MORE 버튼 */
+#new .more {font-size:0.938rem; padding:12px 33px; border:1px solid #000;}
 /* -----------------------------------------main end */

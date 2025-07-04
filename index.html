@@ -15,7 +15,7 @@
     <link href="./styles/reset.css" rel="stylesheet">
     <link href="./styles/index.css" rel="stylesheet">
     <script src="./scripts/index.js" defer></script>
-    <script src="./scripts/pd_new.js" defer></script>
+    <script src="./scripts/new_DB.js" defer></script>
     
 </head>
 <body>
@@ -41,13 +41,16 @@
                 <a href="#"><img src="./images/icon_search.png" alt="검색하기"></a>
             </li>
             <li>
-                <a href="#">로그인</a>
+                <a href="#" id="login">로그인</a>
             </li>
             <li>
-                <a href="#">회원가입</a>
+                <a href="#" id="join">회원가입</a>
             </li>
             <li>
-                <a href="#"><span>장바구니</span><img src="./images/icon_cart.png" alt="장바구니 보기"></a>
+                <a href="#" id="cart">
+                    <span>장바구니</span>
+                    <img src="./images/icon_cart.png" alt="장바구니 보기">
+                </a>
             </li>
         </ul>
     </header>
@@ -81,6 +84,8 @@
                 <!-- 좌우 방향 버튼 -->
                 <div class="swiper-button-prev"></div><!-- button 명칭 줄이지 말자 -->
                 <div class="swiper-button-next"></div>
+                <!-- 페이지 디자인 -->
+                <div class="swiper-pagination"></div>
             </div>
         </section>
         <!-- 2행 -->
@@ -100,33 +105,49 @@
                     <button type="button" class="gender">스포츠</button>
                 </li>
             </ul>
-            <ul class="container">
-                <li>
-                    <a href="#" class="product">
-                        <!-- 제품 이미지 -->
-                        <div class="img">
-                            <span class="new">NEW</span>
-                            <img src="./images/img_new_001.jpg" alt="남성 러닝 반팔 티 런 드라이 100">
-                            <div class="colorchip">
-                                <img src="./images/color_black.png" alt="블랙">
-                                <img src="./images/color_blue.png" alt="블루">
-                                <img src="./images/color_blue.png" alt="블루">
-                                <img src="./images/color_gray.png" alt="그레이">
-                                <img src="./images/color_red.png" alt="레드">
-                                <img src="./images/color_white.png" alt="화이트">
+            <!-- 상품 스와이프 -->
+            <div class="swiper-container">
+                <!--필수-->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">slide1</div>
+                    <div class="swiper-slide slide2">slide2</div>
+                    <div class="swiper-slide slide3">slide3</div>
+                </div>
+            </div>
+            <!-- <div class="container">
+                <div class="swiper" id="new_product">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            제품 이미지
+                            <a href="#" class="pd_img">
+                                <P>NEW</P>
+                                <div class="color_chips">
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                            </a>
+                            <a href="#" class="like"><img src="./images/icon_cart_save.png" alt="장바구니 넣기"></a>
+                            제품 이름 
+                            <div class="name">
+                                <a href="#" class="brand">DECATHLON</a>
+                                <a href="#" class="pd_name">남성 러닝 반팔 티 런 드라이 100</a>
                             </div>
-                            <button type="button" class="cart_save"><img src="./images/icon_cart_save.png" alt=""></button>
+                            재품 가격
+                            <p class="sale_price">
+                                <span>24%</span>
+                                <span>73,576</span>
+                            </p>
                         </div>
-                        <!-- 제품이름 -->
-                        <div class="name">
-                            <p>DECATHLON</p>
-                            <p>남성 러닝 반팔 티 런 드라이 100</p>
-                        </div>
-                        <!-- 제품 가격 -->
-                        <p>9,900</p>
-                    </a>
-                </li>
-            </ul>
+                        <div class="swiper-slide slide2"></div>
+                        <div class="swiper-slide slide3"></div>
+                        <div class="swiper-slide slide4"></div>
+                        <div class="swiper-slide slide5"></div>
+                    </div>
+                </div>
+                <a href="#" class="more">MORE</a>
+            </div>-->
         </section>
         <!-- 3행 -->
         <!-- 4행 -->
