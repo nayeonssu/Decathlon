@@ -14,7 +14,7 @@ const bestSwiper = new Swiper('#best',{
     },
 })
 /* ----------------------2행 */
-/* 상품 스와이퍼 */
+/* 2행,6행,7행 스와이퍼 */
 const newSwiper = new Swiper('.new_swiper', {
     slidesPerView:'auto',
     spaceBetween:15,
@@ -22,3 +22,9 @@ const newSwiper = new Swiper('.new_swiper', {
     slidesOffsetLeft: 70,
 })
 /* 반복 데이터 */
+const eventSwiper = new Swiper('.event_swiper', {
+    slidesPerView:'auto',
+    spaceBetween:15,
+    centeredSlides: false,
+    slidesOffsetLeft: 70,
+})
