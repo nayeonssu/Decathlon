@@ -13,8 +13,8 @@
     <link href="./styles/reset.css" rel="stylesheet">
     <link href="./styles/main.css" rel="stylesheet">
     <script src="./scripts/main.js" defer></script>
-    <script src="./scripts/DB.js" defer></script>
     <script src="./scripts/swiper.js" defer></script>
+    <script src="./scripts/DB.js" defer></script>
     
 </head>
 <body>
@@ -897,12 +897,22 @@
                 </li>
             </ul>
             <!-- 상품 스와이프 -->
-            <div class="swiper new_swiper">
+            <div class="swiper" id="sale_swiper">
                 <ul class="swiper-wrapper">
-                    <li class="swiper-slide slide1">
-                        <a href="#">
+                </ul>
+            </div>
+            <a href="#" class="more"><span>MORE</span></a>
+        </section>
+        <!-- 8행 -->
+        <!-- 9행 -->
+        <!-- 10행 -->
+    </main>
+    <footer></footer>
+</body>
+</html>
+<!-- <a href="#">
                             <div class="pd_img">
-                                <!-- <span class="badge new">NEW</span> -->
+                                <span class="badge new">NEW</span>
                                 <img src="./images/img_sale_001.jpg" alt="여성 러닝 반팔 티 런 드라이 100">
                                 
                                 <ul class="colors">
@@ -918,7 +928,6 @@
                             </div>
 
                             <div class="info">
-                                <!-- 할인가 -->
                                 <div class="top">
                                     <p class="brand">KALENJI</p>
                                     <p class="name">여성 러닝 반팔 티 런 드라이 100</p>
@@ -931,211 +940,4 @@
                                     </p>
                                 </div>
                             </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide slide2">
-                        <a href="#">
-                            <div class="pd_img">
-                                <!-- <span class="badge new">NEW</span> -->
-                                <img src="./images/img_sale_002.jpg" alt="여성 러닝 경량 싱글렛 런 900 라이트">
-                                
-                                <ul class="colors">
-                                    <li class="circle purple"></li>
-                                    <li class="circle black"></li>
-                                </ul>
-
-                                <button type="button" class="cart-btn">
-                                    <img src="./images/icon_cart_save.png" alt="장바구니 담기">
-                                </button>
-                            </div>
-
-                            <div class="info">
-                                <!-- 할인가 -->
-                                <div class="top">
-                                    <p class="brand">KIPRUN</p>
-                                    <p class="name">여성 러닝 경량 싱글렛 런 900 라이트</p>
-                                </div>
-                                <div class="bottom">
-                                    <p class="original-price">34,900</p>
-                                    <p class="price">
-                                        <span class="sale-percent">14%</span>
-                                        <span class="sale-price">29,900</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide slide3">
-                        <a href="#">
-                            <div class="pd_img">
-                                <!-- <span class="badge new">NEW</span> -->
-                                <img src="./images/img_sale_003.jpg" alt="여성 러닝 7부 레깅스 런 드라이 100">
-                                
-                                <ul class="colors">
-                                    <li class="circle black"></li>
-                                </ul>
-
-                                <button type="button" class="cart-btn">
-                                    <img src="./images/icon_cart_save.png" alt="장바구니 담기">
-                                </button>
-                            </div>
-
-                            <div class="info">
-                                <!-- 할인가 -->
-                                <div class="top">
-                                    <p class="brand">KIPRUN</p>
-                                    <p class="name">여성 러닝 7부 레깅스 런 드라이 100</p>
-                                </div>
-                                <div class="bottom">
-                                    <p class="original-price">17,900</p>
-                                    <p class="price">
-                                        <span class="sale-percent">6%</span>
-                                        <span class="sale-price">19,900</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide slide4">
-                        <a href="#">
-                            <div class="pd_img">
-                                <!-- <span class="badge new">NEW</span> -->
-                                <img src="./images/img_sale_004.jpg" alt="여성 러닝 바지 런 드라이 500">
-                                
-                                <ul class="colors">
-                                    <li class="circle beige"></li>
-                                    <li class="circle gray"></li>
-                                    <li class="circle purple"></li>
-                                </ul>
-
-                                <button type="button" class="cart-btn">
-                                    <img src="./images/icon_cart_save.png" alt="장바구니 담기">
-                                </button>
-                            </div>
-
-                            <div class="info">
-                                <!-- 할인가 -->
-                                <div class="top">
-                                    <p class="brand">KIPRUN</p>
-                                    <p class="name">여성 러닝 바지 런 드라이 500</p>
-                                </div>
-                                <div class="bottom">
-                                    <p class="original-price">44,900</p>
-                                    <p class="price">
-                                        <span class="sale-percent">25%</span>
-                                        <span class="sale-price">33,900</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide slide5">
-                        <a href="#">
-                            <div class="pd_img">
-                                <!-- <span class="badge new">NEW</span> -->
-                                <img src="./images/img_sale_005.jpg" alt="여성 러닝 자외선 차단 심리스 자켓 런 500">
-                                
-                                <ul class="colors">
-                                    <li class="circle beige"></li>
-                                    <li class="circle gray"></li>
-                                    <li class="circle purple"></li>
-                                </ul>
-
-                                <button type="button" class="cart-btn">
-                                    <img src="./images/icon_cart_save.png" alt="장바구니 담기">
-                                </button>
-                            </div>
-
-                            <div class="info">
-                                <div class="top">
-                                    <p class="brand">KIPRUN</p>
-                                    <p class="name">여성 러닝 자외선 차단 심리스 자켓 런 500</p>
-                                </div>
-                                <div class="bottom">
-                                    <p class="original-price">44,900</p>
-                                    <p class="price">
-                                        <span class="sale-percent">10%</span>
-                                        <span class="sale-price">35,900</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide slide6">
-                        <a href="#">
-                            <div class="pd_img">
-                                <!-- <span class="badge new">NEW</span> -->
-                                <img src="./images/img_new_001.jpg" alt="남성 러닝 반팔 티 런 드라이 100">
-                                
-                                <ul class="colors">
-                                    <li class="circle black"></li>
-                                    <li class="circle blue"></li>
-                                    <li class="circle blue"></li>
-                                    <li class="circle gray"></li>
-                                </ul>
-
-                                <button type="button" class="cart-btn">
-                                    <img src="./images/icon_cart_save.png" alt="장바구니 담기">
-                                </button>
-                            </div>
-
-                            <div class="info">
-                                <div class="top">
-                                    <p class="brand">OLAIAN</p>
-                                    <p class="name">여아 서핑 긴팔 래쉬가드 UV TOP500 ML</p>
-                                </div>
-                                <div class="bottom">
-                                    <p class="original-price">22,000</p>
-                                    <p class="price">
-                                        <span class="sale-percent">55%</span>
-                                        <span class="sale-price">9,900</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide slide7">
-                        <a href="#">
-                            <div class="pd_img">
-                                <!-- <span class="badge new">NEW</span> -->
-                                <img src="./images/img_new_001.jpg" alt="남성 러닝 반팔 티 런 드라이 100">
-                                
-                                <ul class="colors">
-                                    <li class="circle black"></li>
-                                    <li class="circle blue"></li>
-                                    <li class="circle blue"></li>
-                                    <li class="circle gray"></li>
-                                    <li class="circle red"></li>
-                                </ul>
-
-                                <button type="button" class="cart-btn">
-                                    <img src="./images/icon_cart_save.png" alt="장바구니 담기">
-                                </button>
-                            </div>
-
-                            <div class="info">
-                                <div class="top">
-                                    <p class="brand">OLAIAN</p>
-                                    <p class="name">여아 서핑 긴팔 래쉬가드 UV TOP500 ML</p>
-                                </div>
-                                <div class="bottom">
-                                    <p class="original-price">22,000</p>
-                                    <p class="price">
-                                        <span class="sale-percent">55%</span>
-                                        <span class="sale-price">9,900</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <a href="#" class="more"><span>MORE</span></a>
-        </section>
-        <!-- 8행 -->
-        <!-- 9행 -->
-        <!-- 10행 -->
-    </main>
-    <footer></footer>
-</body>
-</html>
+                        </a> -->

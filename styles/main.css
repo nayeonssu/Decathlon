@@ -229,8 +229,7 @@ h3 {font-size:2.375rem; font-weight:700;}
 /* ----------------------------3행 4행 */
 
 #summer {   
-    /* background:url(../images/bg_001.jpg); */ margin:100px 0; padding-left:180px;
-    background-color:pink;
+    background:url(../images/bg_001.jpg); margin:100px 0; padding-left:180px;
 }
 #summer .bg {padding:90px 0; display:flex; flex-flow:row nowrap; justify-content:space-between; gap:218px;}
 #summer .bg .left {display:flex; flex-flow:column nowrap; justify-content:space-between;}
@@ -288,6 +287,7 @@ h3 {font-size:2.375rem; font-weight:700;}
 .event_swiper .swiper-wrapper .swiper-slide a .pd_img .colors .purple  {background-color: #7C3380;}
 .event_swiper .swiper-wrapper .swiper-slide a .pd_img .colors .pink  {background-color: #E30076;}
 .event_swiper .swiper-wrapper .swiper-slide a .pd_img .colors .beige  {background-color: #C9C0AA;}
+.event_swiper .swiper-wrapper .swiper-slide a .pd_img .colors .redbroun  {background-color: #C53D3D;}
 /* 장바구니 버튼 */
 .event_swiper .swiper-wrapper .swiper-slide a .pd_img .cart-btn  {
     position: absolute;
