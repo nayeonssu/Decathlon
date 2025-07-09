@@ -331,10 +331,57 @@ display:flex; flex-flow:column nowrap; justify-content:space-between;}
 .event .container .swiper .swiper-wrapper .swiper-slide .info .bottom p .sale-price  {color: #fff;/* 제품 */}
 
 /* -----------------------5행 */
-#brand {background-color:yellow; margin:70px 100px;}
-#brand .brand-go {display:flex; gap:40px;}
-#brand .brand-go a {width:870px; height:410px;}
-#brand .brand-go .brand-kiprun {background:url(../images/brand_bg_decathlon.jpg);}
-#brand .brand-go .brand-decathlon {background:url(../images/brand_bg_decathlon.jpg);}
+#brand {margin:70px 100px;}
+#brand .brand-go {display:flex; gap:40px; justify-content:center;}
+#brand .brand-go a {
+    width:870px; height:410px;
+    position: relative;
+}
+#brand .brand-go a .info {position:absolute; top:110px; left:102px;}
+#brand .brand-go a .info img {}
+#brand .brand-go a .info h3 {color: #fff; margin:15px 0 10px;}
+#brand .brand-go a .info p:nth-of-type(1) {color:#fff}
+#brand .brand-go a .info p:nth-of-type(2) {
+    background:#fff;
+    width:134px; line-height:39px;
+    text-align:center;
+    margin-top:52px;
+}
+#brand .brand-go #brand-kiprun {background:url(../images/brand_bg_kiprun.jpg) center right;}
+#brand .brand-go #brand-decathlon {background:url(../images/brand_bg_decathlon.jpg) center right;}
 
+/* -----------------------5행 */
+#story {margin:80px 0;}
+#story .wrap {display:flex; justify-content:center; gap:15px;}
+#story .wrap a {width:346px; height:155px; background:green; position:relative;}
+#story .wrap a:nth-child(1) {background:url(../images/img_story_001.jpg);}
+#story .wrap a:nth-child(2) {background:url(../images/img_story_002.jpg);}
+#story .wrap a:nth-child(3) {background:url(../images/img_story_003.jpg);}
+#story .wrap a:nth-child(4) {background:url(../images/img_story_004.jpg);}
+#story .wrap a .info {position:absolute; left:27px; bottom:25px;}
+#story .wrap a .info p:nth-of-type(1) {margin-bottom:10px; color:#fff;}
+#story .wrap a .info p:nth-of-type(2) {color:rgba(255, 255, 255, 0.6); text-decoration: underline;}
 /* -----------------------------------------main end */
+
+/* -----------------------------------------footer start */
+footer {display:flex; justify-content:space-between; padding:60px 70px; background:#F9F9F9;}
+/* 왼쪽 */
+footer .left {width:433px;}
+footer .left .user-info {margin-bottom:25px;}
+footer .left .user-info h5 {font-weight:600; margin-bottom:10px;}
+footer .left .user-info p {line-height:1.7; font-size:0.75rem; font-weight:300;}
+footer .left .follow-us {}
+footer .left .follow-us h5 {font-weight:600; margin-bottom:10px;}
+footer .left .follow-us a {margin-right:13px;}
+footer .left .follow-us a img {}
+/* 센터 */
+footer .center {width:972px; display:flex; justify-content:space-between; margin:0 100px;}
+footer .center li {display:flex; flex-flow: column nowrap;}
+footer .center li h5 {font-weight:600;  margin-bottom:23px;}
+footer .center li a {font-size:0.875rem; margin-bottom:16px;}
+/* 오른쪽 */
+footer .right {display:flex; flex-flow: column nowrap; justify-content: right;}
+footer .right h5 {font-weight:600;}
+footer .right #google-play {height:55px; margin:10px 0;}
+footer .right #app-store {height:55px;}
+/* -----------------------------------------footer end */
