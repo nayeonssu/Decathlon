@@ -31,6 +31,7 @@ header nav .gnb > li > a {
     font-size:1.063rem;
     font-weight:500;
 }
+header nav .gnb > li > a:hover {}
 /* 회원정보(검색, 로그인, 회원가입, 장바구니) */
 header .right_menu {
     display:flex;
@@ -183,7 +184,9 @@ h3 {font-size:2.375rem; font-weight:700;}
 }
 
 /* 상품 제품 개별 */
-.container .swiper .swiper-wrapper .slide1 {margin-left:70px;/* 제품 */}
+.container .swiper .swiper-wrapper:first-child {margin-left:70px;/* 제품 */}
+.container .swiper .swiper-wrapper:last-child {margin-right:70px;/* 제품 */}
+.container .swiper .swiper-wrapper .slide1 {/* 제품 */}
 .container .swiper .swiper-wrapper .slide2 {/* 제품 */}
 .container .swiper .swiper-wrapper .slide3 {/* 제품 */}
 .container .swiper .swiper-wrapper .slide4 {/* 제품 */}
@@ -323,10 +326,11 @@ display:flex; flex-flow:column nowrap; justify-content:space-between;}
     border-color:#fff;
 }
 /* 오른쪽 */
-.event .container {width:100%;}
+.event .container {width:100%; overflow: hidden;}
 .event .container .swiper {}
 /* 1번째 제품 */
-.event .container .swiper .swiper-wrapper .slide1 {margin-left:0px;/* 제품 */}
+main .event .container .swiper .swiper-wrapper:first-child {margin-left:0px;/* 제품 */}
+main .event .container .swiper .swiper-wrapper:last-child {margin-right: 70px;/* 제품 */}
 .event .container .swiper .swiper-wrapper .swiper-slide .info {/* 제품 */}
 .event .container .swiper .swiper-wrapper .swiper-slide .info .top .brand {color:rgba(255, 255, 255, 0.5);/* 제품 */}
 .event .container .swiper .swiper-wrapper .swiper-slide .info .top .name {color:#fff;/* 제품 */}
@@ -355,7 +359,7 @@ display:flex; flex-flow:column nowrap; justify-content:space-between;}
 #brand .brand-go #brand-decathlon {background:url(../images/brand_bg_decathlon.jpg) center right;}
 
 /* -----------------------8행 */
-#ectivity {background-color:yellowgreen;}
+#ectivity {}
 #ectivity h3 {margin-bottom:40px;}
 
 /* 보이는 영역 */
@@ -373,24 +377,29 @@ display:flex; flex-flow:column nowrap; justify-content:space-between;}
 }
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt {position:absolute; left:27px; bottom: 27px;}
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt p:nth-of-type(1) {font-size:1.875rem; font-weight:700; color:#fff; margin-bottom:10px;}
-#ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt p:nth-of-type(2) {color:rgba(255, 255, 255, 0.6); text-decoration: underline;}
+#ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt p:nth-of-type(2) {color:#fff; text-decoration: underline; font-size:0.875rem;}
 
 
 #ectivity .swiper .swiper-wrapper .swiper-slide .product {}
-#ectivity .swiper .swiper-wrapper .swiper-slide .product li {
-    display:flex;
-}
+#ectivity .swiper .swiper-wrapper .swiper-slide .product li {display:flex;}
 #ectivity .swiper .swiper-wrapper .swiper-slide .product li:nth-of-type(1) {margin-bottom:20px;}
-#ectivity .swiper .swiper-wrapper .swiper-slide .product li a {
-    background-color:red;
+#ectivity .swiper .swiper-wrapper .swiper-slide .product li .product-url {
+    background-color:#F2F2F2;
     width:104px;
     height:123px;
 }
+#ectivity .swiper .swiper-wrapper .swiper-slide .product li .product-url img {}
 /* 정보 */
-#ectivity .swiper .swiper-wrapper .swiper-slide .product li .info {padding: 9px 30px; width: 296px;}
+#ectivity .swiper .swiper-wrapper .swiper-slide .product li .info {
+    /* padding: 9px 30px; width: 296px; */
+    /* height: 123px;; */
+    display: flex;
+    flex-flow: column; justify-content: space-between;
+    height: 123px; padding: 9px 30px;
+}
 /* 로고 + 이름 */
 #ectivity .swiper .swiper-wrapper .swiper-slide .product li .info .top {}
-#ectivity .swiper .swiper-wrapper .swiper-slide .product li .info .top .brand {color:rgba(255, 255, 255, 0.5); font-size: 0.75rem;}
+#ectivity .swiper .swiper-wrapper .swiper-slide .product li .info .top .brand {color:rgba(0, 0, 0, 0.5); font-size: 0.75rem;}
 #ectivity .swiper .swiper-wrapper .swiper-slide .product li .info .top .name {font-size: 0.875rem; line-height:1.5;}
 /* 가격 */
 #ectivity .swiper .swiper-wrapper .swiper-slide .product li .info .bottom {}

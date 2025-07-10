@@ -24,7 +24,102 @@
         <!-- 중간 -->
         <nav>
             <ul class="gnb">
-                <li><a href="#">신제품</a></li><!-- lnb bg를 묶어주는 div 먼저 한 다음 ul li 들어감 -->
+                <li><a href="#">신제품</a>
+                    <div class="lnb_bg">
+                        <ul class="lnb_depth1">
+                            <li>
+                                <a href="#">러닝</a>
+                                <ul class="lnb_depth2">
+                                    <li><a href="#">신제품</a></li>
+                                    <li><a href="#">베스트셀러</a></li>
+                                    <li><a href="#">러닝화</a></li>
+                                    <li><a href="#">남성</a></li>
+                                    <li><a href="#">여성</a></li>
+                                    <li><a href="#">용품</a></li>
+                                    <li><a href="#">트레일러닝</a></li>
+                                    <li><a href="#">러닝 클리어런스</a></li>
+                                    <li><a href="#">러닝웨어</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">등산</a>
+                                <ul class="lnb_depth2">
+                                    <li><a href="#">신제품</a></li>
+                                    <li><a href="#">베스트셀러</a></li>
+                                    <li><a href="#">남성</a></li>
+                                    <li><a href="#">여성</a></li>
+                                    <li><a href="#">아동</a></li>
+                                    <li><a href="#">용품</a></li>
+                                    <li><a href="#">등산 클리어런스</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">킥보드/인라인</a>
+                                <ul class="lnb_depth2">
+                                    <li><a href="#">칵보드</a></li>
+                                    <li><a href="#">인라인</a></li>
+                                    <li><a href="#">스케이트보드</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">필라테/피트니스</a>
+                                <ul class="lnb_depth2">
+                                    <li><a href="#">웨이트 트레이닝</a></li>
+                                    <li><a href="#">유산소 운동</a></li>
+                                    <li><a href="#">필라테스/요가</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">SPC삼립소개</a>
+                                <ul class="lnb_depth2">
+                                    <li><a href="#">경영이념</a></li>
+                                    <li><a href="#">연혁</a></li>
+                                    <li><a href="#">사업분야</a></li>
+                                    <li><a href="#">공장소개</a></li>
+                                    <li><a href="#">주요 관계사</a></li>
+                                    <li><a href="#">CI/BI</a></li>
+                                    <li><a href="#">오시는 길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">SPC삼립소개</a>
+                                <ul class="lnb_depth2">
+                                    <li><a href="#">경영이념</a></li>
+                                    <li><a href="#">연혁</a></li>
+                                    <li><a href="#">사업분야</a></li>
+                                    <li><a href="#">공장소개</a></li>
+                                    <li><a href="#">주요 관계사</a></li>
+                                    <li><a href="#">CI/BI</a></li>
+                                    <li><a href="#">오시는 길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">SPC삼립소개</a>
+                                <ul class="lnb_depth2">
+                                    <li><a href="#">경영이념</a></li>
+                                    <li><a href="#">연혁</a></li>
+                                    <li><a href="#">사업분야</a></li>
+                                    <li><a href="#">공장소개</a></li>
+                                    <li><a href="#">주요 관계사</a></li>
+                                    <li><a href="#">CI/BI</a></li>
+                                    <li><a href="#">오시는 길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">SPC삼립소개</a>
+                                <ul class="lnb_depth2">
+                                    <li><a href="#">경영이념</a></li>
+                                    <li><a href="#">연혁</a></li>
+                                    <li><a href="#">사업분야</a></li>
+                                    <li><a href="#">공장소개</a></li>
+                                    <li><a href="#">주요 관계사</a></li>
+                                    <li><a href="#">CI/BI</a></li>
+                                    <li><a href="#">오시는 길</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li><!-- lnb bg를 묶어주는 div 먼저 한 다음 ul li 들어감 -->
                 <li><a href="#">남성</a></li>
                 <li><a href="#">여성</a></li>
                 <li><a href="#">키즈</a></li>
@@ -5370,14 +5465,16 @@
                     <div class="swiper-slide slide1"><!-- 제품1개 -->
                         <div class="select_img"><!-- 엑티비티 이미지 -->
                             <a href="#"><img src="./images/img_ectivity_hiking.jpg" alt=""></a>
-                            <div class="txt">
+                            <a class="txt">
                                 <p>등산</p>
                                 <p>더 보러가기</p>
-                            </div>
+                            </a>
                         </div>
                         <ul  class="product">
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_001.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5395,7 +5492,9 @@
                                 </div>
                             </li>
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_002.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5414,17 +5513,19 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="swiper-slide slide1"><!-- 제품1개 -->
+                    <div class="swiper-slide slide2"><!-- 제품1개 -->
                         <div class="select_img"><!-- 엑티비티 이미지 -->
                             <a href="#"><img src="./images/img_ectivity_hiking.jpg" alt=""></a>
-                            <div class="txt">
-                                <p>등산</p>
+                            <a class="txt">
+                                <p>러닝</p>
                                 <p>더 보러가기</p>
-                            </div>
+                            </a>
                         </div>
                         <ul  class="product">
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_001.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5442,7 +5543,9 @@
                                 </div>
                             </li>
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_002.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5461,17 +5564,19 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="swiper-slide slide1"><!-- 제품1개 -->
+                    <div class="swiper-slide slide3"><!-- 제품1개 -->
                         <div class="select_img"><!-- 엑티비티 이미지 -->
                             <a href="#"><img src="./images/img_ectivity_hiking.jpg" alt=""></a>
-                            <div class="txt">
-                                <p>등산</p>
+                            <a class="txt">
+                                <p>킥보드/인라인</p>
                                 <p>더 보러가기</p>
-                            </div>
+                            </a>
                         </div>
                         <ul  class="product">
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_001.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5489,7 +5594,9 @@
                                 </div>
                             </li>
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_002.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5508,17 +5615,19 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="swiper-slide slide1"><!-- 제품1개 -->
+                    <div class="swiper-slide slide4"><!-- 제품1개 -->
                         <div class="select_img"><!-- 엑티비티 이미지 -->
                             <a href="#"><img src="./images/img_ectivity_hiking.jpg" alt=""></a>
-                            <div class="txt">
-                                <p>등산</p>
+                            <a class="txt">
+                                <p>필라테/피트니스</p>
                                 <p>더 보러가기</p>
-                            </div>
+                            </a>
                         </div>
                         <ul  class="product">
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_001.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5536,7 +5645,9 @@
                                 </div>
                             </li>
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_002.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5555,17 +5666,19 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="swiper-slide slide1"><!-- 제품1개 -->
+                    <div class="swiper-slide slide5"><!-- 제품1개 -->
                         <div class="select_img"><!-- 엑티비티 이미지 -->
                             <a href="#"><img src="./images/img_ectivity_hiking.jpg" alt=""></a>
-                            <div class="txt">
-                                <p>등산</p>
+                            <a class="txt">
+                                <p>수영/스노클링/서핑</p>
                                 <p>더 보러가기</p>
-                            </div>
+                            </a>
                         </div>
                         <ul  class="product">
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_001.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5583,7 +5696,9 @@
                                 </div>
                             </li>
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_002.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5602,17 +5717,19 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="swiper-slide slide1"><!-- 제품1개 -->
+                    <div class="swiper-slide slide6"><!-- 제품1개 -->
                         <div class="select_img"><!-- 엑티비티 이미지 -->
                             <a href="#"><img src="./images/img_ectivity_hiking.jpg" alt=""></a>
-                            <div class="txt">
-                                <p>등산</p>
+                            <a class="txt">
+                                <p>구기/라켓스포츠</p>
                                 <p>더 보러가기</p>
-                            </div>
+                            </a>
                         </div>
                         <ul  class="product">
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_001.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
@@ -5630,7 +5747,162 @@
                                 </div>
                             </li>
                             <li><!-- 1번제품 -->
-                                <a href="#"><!-- background-img --></a>
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_002.jpg" alt="">
+                                </a>
+                                <div class="info">
+                                    <!-- 로고 + 이름 -->
+                                    <a href="#" class="top">
+                                        <p class="brand">DECATHLON</p>
+                                        <p class="name">남성 러닝 반팔 티 런 드라이 100</p>
+                                    </a>
+                                    <!-- 가격 -->
+                                    <div class="bottom">
+                                        <!-- <p class="original-price">22,000</p> -->
+                                        <p class="price">
+                                            <!-- <span class="sale-percent">55%</span> -->
+                                            <span class="sale-price">9,900</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide slide7"><!-- 제품1개 -->
+                        <div class="select_img"><!-- 엑티비티 이미지 -->
+                            <a href="#"><img src="./images/img_ectivity_hiking.jpg" alt=""></a>
+                            <a class="txt">
+                                <p>자전거</p>
+                                <p>더 보러가기</p>
+                            </a>
+                        </div>
+                        <ul  class="product">
+                            <li><!-- 1번제품 -->
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_001.jpg" alt="">
+                                </a>
+                                <div class="info">
+                                    <!-- 로고 + 이름 -->
+                                    <a href="#" class="top">
+                                        <p class="brand">DECATHLON</p>
+                                        <p class="name">남성 러닝 반팔 티 런 드라이 100</p>
+                                    </a>
+                                    <!-- 가격 -->
+                                    <div class="bottom">
+                                        <p class="original-price">22,000</p>
+                                        <p class="price">
+                                            <span class="sale-percent">55%</span>
+                                            <span class="sale-price">9,900</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><!-- 1번제품 -->
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_002.jpg" alt="">
+                                </a>
+                                <div class="info">
+                                    <!-- 로고 + 이름 -->
+                                    <a href="#" class="top">
+                                        <p class="brand">DECATHLON</p>
+                                        <p class="name">남성 러닝 반팔 티 런 드라이 100</p>
+                                    </a>
+                                    <!-- 가격 -->
+                                    <div class="bottom">
+                                        <!-- <p class="original-price">22,000</p> -->
+                                        <p class="price">
+                                            <!-- <span class="sale-percent">55%</span> -->
+                                            <span class="sale-price">9,900</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide slide8"><!-- 제품1개 -->
+                        <div class="select_img"><!-- 엑티비티 이미지 -->
+                            <a href="#"><img src="./images/img_ectivity_hiking.jpg" alt=""></a>
+                            <a class="txt">
+                                <p>기타스포츠</p>
+                                <p>더 보러가기</p>
+                            </a>
+                        </div>
+                        <ul  class="product">
+                            <li><!-- 1번제품 -->
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_001.jpg" alt="">
+                                </a>
+                                <div class="info">
+                                    <!-- 로고 + 이름 -->
+                                    <a href="#" class="top">
+                                        <p class="brand">DECATHLON</p>
+                                        <p class="name">남성 러닝 반팔 티 런 드라이 100</p>
+                                    </a>
+                                    <!-- 가격 -->
+                                    <div class="bottom">
+                                        <p class="original-price">22,000</p>
+                                        <p class="price">
+                                            <span class="sale-percent">55%</span>
+                                            <span class="sale-price">9,900</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><!-- 1번제품 -->
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_002.jpg" alt="">
+                                </a>
+                                <div class="info">
+                                    <!-- 로고 + 이름 -->
+                                    <a href="#" class="top">
+                                        <p class="brand">DECATHLON</p>
+                                        <p class="name">남성 러닝 반팔 티 런 드라이 100</p>
+                                    </a>
+                                    <!-- 가격 -->
+                                    <div class="bottom">
+                                        <!-- <p class="original-price">22,000</p> -->
+                                        <p class="price">
+                                            <!-- <span class="sale-percent">55%</span> -->
+                                            <span class="sale-price">9,900</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide slide9"><!-- 제품1개 -->
+                        <div class="select_img"><!-- 엑티비티 이미지 -->
+                            <a href="#"><img src="./images/img_ectivity_hiking.jpg" alt=""></a>
+                            <a class="txt">
+                                <p>스키/스노우보드</p>
+                                <p>더 보러가기</p>
+                            </a>
+                        </div>
+                        <ul  class="product">
+                            <li><!-- 1번제품 -->
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_001.jpg" alt="">
+                                </a>
+                                <div class="info">
+                                    <!-- 로고 + 이름 -->
+                                    <a href="#" class="top">
+                                        <p class="brand">DECATHLON</p>
+                                        <p class="name">남성 러닝 반팔 티 런 드라이 100</p>
+                                    </a>
+                                    <!-- 가격 -->
+                                    <div class="bottom">
+                                        <p class="original-price">22,000</p>
+                                        <p class="price">
+                                            <span class="sale-percent">55%</span>
+                                            <span class="sale-price">9,900</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><!-- 1번제품 -->
+                                <a href="#" class="product-img">
+                                    <img src="./images/ecti_hiking_002.jpg" alt="">
+                                </a>
                                 <div class="info">
                                     <!-- 로고 + 이름 -->
                                     <a href="#" class="top">
