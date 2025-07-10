@@ -39,3 +39,11 @@ const sportsSwiper = new Swiper('.sports_swiper', {
     centeredSlides: false,
     slidesOffsetLeft: 70,
 })
+const ectiSwiper = new Swiper('.ecti_swiper', {
+    slidesPerView:4,
+    spaceBetween:15,
+    centeredSlides: false,
+    loop:true,
+    autoplay:{delay:3000},
+    direction:'horizontal',
+})
