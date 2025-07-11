@@ -2,8 +2,130 @@
 /* header */
 body, html {margin:0; padding:0;}
 /* 잠깐만 가리고 지울거 */
-main {display:none;}
+main {z-index: 1;}
 
+/* ----------------------------------------------header start*/
+/* ----------------------------------------------로고*/
+#tap-nav {z-index: 999;}
+#tap-nav header h1 {}
+#tap-nav header h1 a {}
+#tap-nav header h1 a img {}
+
+#tap-nav {
+    min-width:1900px;/* 최소제한넓이로 맟춰서 웹 화면 비율이 작아져도 고정상태가 되도록 한다. */
+    /* 헤더가 fixed(떠있는상태)라서 넓이 비율을 최소제한넓이와 같도록 한다. */
+}
+#tap-nav header {
+    position:fixed;/* lnb_bg의 부모 위치 기준 설정 */
+    width:100%; min-width:1200px; height:76px;
+    padding:0 60px;
+    z-index:900;/* -1 ~ 999 단위없고 중첩순서만 결정하는 position 선택속성 */
+    /* container(header) item(h1, nav, right_menu) */
+    display:flex;
+    flex-flow:row nowrap;/* 방향과 줄바꿈 */
+    justify-content:space-between;/* 메인축의 정렬방법 */ /* figma의 auto같은 느낌 */
+    align-items:center;/* 교차축이 1줄일때 center */
+    background-color:#fff;
+}
+#tap-nav header h1 {}
+#tap-nav header h1 a {}
+#tap-nav header h1 a img {}
+#tap-nav header nav {}
+#tap-nav header nav .gnb {
+    display:flex; flex-flow:row nowrap;
+}
+#tap-nav header nav .gnb > li {/* margin:0 25px; */ text-align: center;}
+#tap-nav header nav .gnb > li > a {
+    width:80px;
+    height:76px; display:block; line-height:76px;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+#tap-nav header nav .gnb > li > a:hover {border-bottom:1px solid #000;}
+/* ===============================서브메뉴 company,ir*/
+#tap-nav header nav .gnb > li:hover .lnb_bg {
+    display:block;
+}
+#tap-nav header nav .gnb > li .lnb_bg {
+    background:rgba(255,255,255,0.9);
+    position:absolute; left:0; top:76px;/* 시작 위치 설정 */
+    width:100%;
+    /* absolute 대상일 경우 width값은 부모설정된 요소의 상대값(%)으로 설정된다. */
+    padding:30px 0;
+    display:none;
+    z-index:999;
+}
+#tap-nav header nav .gnb > li .lnb_bg .lnb_depth1 {
+    width:max-content;
+    margin:0 auto;
+    display:flex;
+    text-align:center;
+}
+#tap-nav header nav .gnb > li .lnb_bg .lnb_depth1 > li {
+    margin-right:60px;
+}
+#tap-nav header nav .gnb > li .lnb_bg .lnb_depth1 > li:last-child {margin-right:0;}
+#tap-nav header nav .gnb > li .lnb_bg .lnb_depth1 > li > a {font-size:1.063rem; font-weight:600;}
+#tap-nav header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 {
+    margin-top:20px;
+}
+#tap-nav header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li:last-child {margin-bottom:0;}
+#tap-nav header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li {margin-bottom:15px;}
+#tap-nav header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li a {color:#777;}
+#tap-nav header nav .gnb > li .lnb_bg .lnb_depth1 > li .lnb_depth2 li a:hover {
+    color:#000;
+    transition:all 0.15s ease-in-out;
+}
+
+/* --------------------------------------------------오른쪽 lnb */
+#tap-nav header .right_menu {
+    display:flex;
+    align-items:center;
+}
+#tap-nav header .right_menu li {
+    display:flex;
+    align-items: center;
+    margin-right:17px;
+}
+/* 검색 */
+#tap-nav header .right_menu li:first-child {
+    background:#ededed;
+    padding:5px 10px;;
+}
+#tap-nav header .right_menu li #product_name {
+    background:none;
+    width: 131px;
+    margin-right:10px;
+    font-size:0.814rem;
+}
+#tap-nav header .right_menu li:first-child a {}
+#tap-nav header .right_menu li:first-child a img {}
+/* 로그인 */
+#tap-nav header .right_menu li #login {
+    font-size:0.875rem;
+}
+#tap-nav header .right_menu li:nth-child(2)::after {
+    content: '|';
+    margin-left:17px;
+}
+/* 회원가입 */
+#tap-nav header .right_menu li #join {
+    font-size:0.875rem;
+}
+#tap-nav header .right_menu li:nth-child(3)::after {
+    content: '|';
+    margin-left:17px;
+}
+/* 장바구니 */
+#tap-nav header .right_menu li:last-child {margin-right:0;}
+#tap-nav header .right_menu li #cart {
+    display:flex;
+    align-items:center;
+}
+#tap-nav header .right_menu li #cart span {}
+#tap-nav header .right_menu li #cart img {margin-left:5px;}
+
+/* -----------------------------------------header end */
 
 /* -----------------------------------------main start */
 /* ------------------------1행*/
@@ -59,7 +181,7 @@ h3 {font-size:2.375rem; font-weight:700;}
     left:0;
     bottom:0;
     width:100%;
-    height:2px;
+    height:1px;
     background-color:#000;
     display:none;
     transform:scaleX(1);
@@ -359,3 +481,26 @@ main .event .container .swiper .swiper-wrapper:last-child {margin-right: 70px;/*
 #story .wrap a .txt p:nth-of-type(1) {margin-bottom:10px; color:#fff;}
 #story .wrap a .txt p:nth-of-type(2) {color:rgba(255, 255, 255, 0.6); text-decoration: underline;}
 /* -----------------------------------------main end */
+
+/* -----------------------------------------footer start */
+footer {display:flex; justify-content:space-between; padding:60px 70px; background:#F9F9F9; display:none;}
+/* 왼쪽 */
+footer .left {width:433px;}
+footer .left .user-info {margin-bottom:25px;}
+footer .left .user-info h5 {font-weight:600; margin-bottom:10px;}
+footer .left .user-info p {line-height:1.7; font-size:0.75rem; font-weight:300;}
+footer .left .follow-us {}
+footer .left .follow-us h5 {font-weight:600; margin-bottom:10px;}
+footer .left .follow-us a {margin-right:13px;}
+footer .left .follow-us a img {}
+/* 센터 */
+footer .center {width:972px; display:flex; justify-content:space-between; margin:0 100px;}
+footer .center li {display:flex; flex-flow: column nowrap;}
+footer .center li h5 {font-weight:600;  margin-bottom:23px;}
+footer .center li a {font-size:0.875rem; margin-bottom:16px;}
+/* 오른쪽 */
+footer .right {display:flex; flex-flow: column nowrap; justify-content: right;}
+footer .right h5 {font-weight:600;}
+footer .right #google-play {height:55px; margin:10px 0;}
+footer .right #app-store {height:55px;}
+/* -----------------------------------------footer end */
