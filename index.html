@@ -12,142 +12,259 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link href="./styles/reset.css" rel="stylesheet">
     <link href="./styles/main.css" rel="stylesheet">
+    <link href="./styles/common.css" rel="stylesheet">
     <script src="./scripts/main.js" defer></script>
     <script src="./scripts/swiper.js" defer></script>
     <!-- <script src="./scripts/DB.js" defer></script> -->
     
 </head>
 <body>
-    <header>
-        <!-- 로고 -->
-        <h1><a href="./styles/index.html"><img src="./images/logo.png" alt="decatlone"></a></h1>
-        <!-- 중간 -->
-        <nav>
-            <ul class="gnb">
-                <li><a href="#">신제품</a>
-                    <div class="lnb_bg">
-                        <ul class="lnb_depth1">
-                            <li>
-                                <a href="#">러닝</a>
-                                <ul class="lnb_depth2">
-                                    <li><a href="#">신제품</a></li>
-                                    <li><a href="#">베스트셀러</a></li>
-                                    <li><a href="#">러닝화</a></li>
-                                    <li><a href="#">남성</a></li>
-                                    <li><a href="#">여성</a></li>
-                                    <li><a href="#">용품</a></li>
-                                    <li><a href="#">트레일러닝</a></li>
-                                    <li><a href="#">러닝 클리어런스</a></li>
-                                    <li><a href="#">러닝웨어</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">등산</a>
-                                <ul class="lnb_depth2">
-                                    <li><a href="#">신제품</a></li>
-                                    <li><a href="#">베스트셀러</a></li>
-                                    <li><a href="#">남성</a></li>
-                                    <li><a href="#">여성</a></li>
-                                    <li><a href="#">아동</a></li>
-                                    <li><a href="#">용품</a></li>
-                                    <li><a href="#">등산 클리어런스</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">킥보드/인라인</a>
-                                <ul class="lnb_depth2">
-                                    <li><a href="#">칵보드</a></li>
-                                    <li><a href="#">인라인</a></li>
-                                    <li><a href="#">스케이트보드</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">필라테/피트니스</a>
-                                <ul class="lnb_depth2">
-                                    <li><a href="#">웨이트 트레이닝</a></li>
-                                    <li><a href="#">유산소 운동</a></li>
-                                    <li><a href="#">필라테스/요가</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">SPC삼립소개</a>
-                                <ul class="lnb_depth2">
-                                    <li><a href="#">경영이념</a></li>
-                                    <li><a href="#">연혁</a></li>
-                                    <li><a href="#">사업분야</a></li>
-                                    <li><a href="#">공장소개</a></li>
-                                    <li><a href="#">주요 관계사</a></li>
-                                    <li><a href="#">CI/BI</a></li>
-                                    <li><a href="#">오시는 길</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">SPC삼립소개</a>
-                                <ul class="lnb_depth2">
-                                    <li><a href="#">경영이념</a></li>
-                                    <li><a href="#">연혁</a></li>
-                                    <li><a href="#">사업분야</a></li>
-                                    <li><a href="#">공장소개</a></li>
-                                    <li><a href="#">주요 관계사</a></li>
-                                    <li><a href="#">CI/BI</a></li>
-                                    <li><a href="#">오시는 길</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">SPC삼립소개</a>
-                                <ul class="lnb_depth2">
-                                    <li><a href="#">경영이념</a></li>
-                                    <li><a href="#">연혁</a></li>
-                                    <li><a href="#">사업분야</a></li>
-                                    <li><a href="#">공장소개</a></li>
-                                    <li><a href="#">주요 관계사</a></li>
-                                    <li><a href="#">CI/BI</a></li>
-                                    <li><a href="#">오시는 길</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">SPC삼립소개</a>
-                                <ul class="lnb_depth2">
-                                    <li><a href="#">경영이념</a></li>
-                                    <li><a href="#">연혁</a></li>
-                                    <li><a href="#">사업분야</a></li>
-                                    <li><a href="#">공장소개</a></li>
-                                    <li><a href="#">주요 관계사</a></li>
-                                    <li><a href="#">CI/BI</a></li>
-                                    <li><a href="#">오시는 길</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </li><!-- lnb bg를 묶어주는 div 먼저 한 다음 ul li 들어감 -->
-                <li><a href="#">남성</a></li>
-                <li><a href="#">여성</a></li>
-                <li><a href="#">키즈</a></li>
-                <li><a href="#">스포츠</a></li>
-                <li><a href="#">베스트</a></li>
-                <li><a href="#">세일</a></li>
+    <div id="tap-nav">
+        <header>
+            <!-- 로고 -->
+            <h1><a href="./styles/index.html"><img src="./images/logo.png" alt="decatlone"></a></h1>
+            <!-- 중간 -->
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">남성</a>
+                        <div class="lnb_bg">
+                            <ul class="lnb_depth1">
+                                <li>
+                                    <a href="#">의류</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">상의</a></li>
+                                        <li><a href="#">하의</a></li>
+                                        <li><a href="#">아우터</a></li>
+                                        <li><a href="#">수영복</a></li>
+                                        <li><a href="#">언더웨어</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">신발</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">러닝</a></li>
+                                        <li><a href="#">등산</a></li>
+                                        <li><a href="#">축구/농구</a></li>
+                                        <li><a href="#">스니커즈</a></li>
+                                        <li><a href="#">아쿠아슈즈</a></li>
+                                        <li><a href="#">윈터슈즈</a></li>
+                                        <li><a href="#">신발용품</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">용품</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">가방</a></li>
+                                        <li><a href="#">장갑</a></li>
+                                        <li><a href="#">모자</a></li>
+                                        <li><a href="#">선글라스</a></li>
+                                        <li><a href="#">보호대</a></li>
+                                        <li><a href="#">양말</a></li>
+                                        <li><a href="#">기타용품</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">여성</a>
+                        <div class="lnb_bg">
+                            <ul class="lnb_depth1">
+                                <li>
+                                    <a href="#">의류</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">상의</a></li>
+                                        <li><a href="#">하의</a></li>
+                                        <li><a href="#">아우터</a></li>
+                                        <li><a href="#">수영복</a></li>
+                                        <li><a href="#">언더웨어</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">신발</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">러닝</a></li>
+                                        <li><a href="#">등산</a></li>
+                                        <li><a href="#">스니커즈</a></li>
+                                        <li><a href="#">아쿠아슈즈</a></li>
+                                        <li><a href="#">윈터슈즈</a></li>
+                                        <li><a href="#">신발용품</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">용품</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">가방</a></li>
+                                        <li><a href="#">장갑</a></li>
+                                        <li><a href="#">모자</a></li>
+                                        <li><a href="#">선글라스</a></li>
+                                        <li><a href="#">보호대</a></li>
+                                        <li><a href="#">양말</a></li>
+                                        <li><a href="#">기타용품</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">키즈</a>
+                        <div class="lnb_bg">
+                            <ul class="lnb_depth1">
+                                <li>
+                                    <a href="#">의류</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">상의</a></li>
+                                        <li><a href="#">하의</a></li>
+                                        <li><a href="#">아우터</a></li>
+                                        <li><a href="#">수영복</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">신발</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">러닝</a></li>
+                                        <li><a href="#">스니커즈</a></li>
+                                        <li><a href="#">아쿠아슈즈</a></li>
+                                        <li><a href="#">신발용품</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">용품</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">가방</a></li>
+                                        <li><a href="#">장갑</a></li>
+                                        <li><a href="#">모자</a></li>
+                                        <li><a href="#">선글라스</a></li>
+                                        <li><a href="#">보호대</a></li>
+                                        <li><a href="#">양말</a></li>
+                                        <li><a href="#">기타용품</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">스포츠</a>
+                        <div class="lnb_bg">
+                            <ul class="lnb_depth1">
+                                <li>
+                                    <a href="#">러닝</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">신제품</a></li>
+                                        <li><a href="#">베스트셀러</a></li>
+                                        <li><a href="#">러닝화</a></li>
+                                        <li><a href="#">남성</a></li>
+                                        <li><a href="#">여성</a></li>
+                                        <li><a href="#">용품</a></li>
+                                        <li><a href="#">트레일러닝</a></li>
+                                        <li><a href="#">러닝 클리어런스</a></li>
+                                        <li><a href="#">러닝웨어</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">등산</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">신제품</a></li>
+                                        <li><a href="#">베스트셀러</a></li>
+                                        <li><a href="#">남성</a></li>
+                                        <li><a href="#">여성</a></li>
+                                        <li><a href="#">아동</a></li>
+                                        <li><a href="#">용품</a></li>
+                                        <li><a href="#">등산 클리어런스</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">킥보드/인라인</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">칵보드</a></li>
+                                        <li><a href="#">인라인</a></li>
+                                        <li><a href="#">스케이트보드</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">필라테/피트니스</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">웨이트 트레이닝</a></li>
+                                        <li><a href="#">유산소 운동</a></li>
+                                        <li><a href="#">필라테스/요가</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">수영/스노클링/서핑</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">수영</a></li>
+                                        <li><a href="#">스노클링</a></li>
+                                        <li><a href="#">서핑/바디보드</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">구기/라켓스포츠</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">축구</a></li>
+                                        <li><a href="#">농구</a></li>
+                                        <li><a href="#">배구</a></li>
+                                        <li><a href="#">야구</a></li>
+                                        <li><a href="#">탁구</a></li>
+                                        <li><a href="#">골프</a></li>
+                                        <li><a href="#">테니스</a></li>
+                                        <li><a href="#">배드민턴</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">자전거</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">자전거</a></li>
+                                        <li><a href="#">용품</a></li>
+                                        <li><a href="#">의류</a></li>
+                                        <li><a href="#">신발&클리트</a></li>
+                                        <li><a href="#">공구/유지보수 장비</a></li>
+                                        <li><a href="#">장비 및 부착물</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">기타스포츠</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">승마</a></li>
+                                        <li><a href="#">육아체육</a></li>
+                                        <li><a href="#">복싱</a></li>
+                                        <li><a href="#">다트</a></li>
+                                        <li><a href="#">공구/유지보수 장비</a></li>
+                                        <li><a href="#">장비 및 부착물</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">스키/스노우보드</a>
+                                    <ul class="lnb_depth2">
+                                        <li><a href="#">의류</a></li>
+                                        <li><a href="#">장비</a></li>
+                                        <li><a href="#">용품</a></li>                                </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">신제품</a></li><!-- lnb bg를 묶어주는 div 먼저 한 다음 ul li 들어감 -->
+                    <li><a href="#">베스트</a></li>
+                    <li><a href="#">세일</a></li>
+                </ul>
+            </nav>
+            <!-- 오른쪽 메뉴 -->
+            <ul class="right_menu">
+                <li>
+                    <input type="text" id="product_name" name="product_name" placeholder="#여름세일">
+                    <a href="#"><img src="./images/icon_search.png" alt="검색하기"></a>
+                </li>
+                <li>
+                    <a href="#" id="login">로그인</a>
+                </li>
+                <li>
+                    <a href="#" id="join">회원가입</a>
+                </li>
+                <li>
+                    <a href="#" id="cart">
+                        <span>장바구니</span>
+                        <img src="./images/icon_cart.png" alt="장바구니 보기">
+                    </a>
+                </li>
             </ul>
-        </nav>
-        <!-- 오른쪽 메뉴 -->
-        <ul class="right_menu">
-            <li>
-                <input type="text" id="product_name" name="product_name" placeholder="#여름세일">
-                <a href="#"><img src="./images/icon_search.png" alt="검색하기"></a>
-            </li>
-            <li>
-                <a href="#" id="login">로그인</a>
-            </li>
-            <li>
-                <a href="#" id="join">회원가입</a>
-            </li>
-            <li>
-                <a href="#" id="cart">
-                    <span>장바구니</span>
-                    <img src="./images/icon_cart.png" alt="장바구니 보기">
-                </a>
-            </li>
-        </ul>
-    </header>
+        </header>
+    </div>
     <main>
         <!-- 1행 -->
         <section id="ad">

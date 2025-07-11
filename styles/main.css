@@ -1,85 +1,9 @@
 /* index.css 메인화면 작업 */
 /* header */
 body, html {margin:0; padding:0;}
-/* -----------------------------------------header start */
-header {
-    position:relative;
-    max-width:100%;
-    min-width:1200px;
-    height:76px;
-    padding:0 70px;
-    display:flex; justify-content:space-between;
-    align-items:center;
-}
-/* 로고*/
-header h1 {
-    
-}
-header h1 a {}
-header h1 a img {}
-/* nav 중앙메뉴 */
-header nav {position: absolute; left: 50%; transform: translateX(-50%);}
-header nav .gnb {
-    display:flex;
-}
-header nav .gnb > li {
-    
-}
-header nav .gnb > li > a {
-    padding:25px;
-    line-height:76px;
-    font-size:1.063rem;
-    font-weight:500;
-}
-header nav .gnb > li > a:hover {}
-/* 회원정보(검색, 로그인, 회원가입, 장바구니) */
-header .right_menu {
-    display:flex;
-    align-items:center;
-}
-header .right_menu li {
-    display:flex;
-    align-items: center;
-    margin-right:17px;
-}
-/* 검색 */
-header .right_menu li:first-child {
-    background:#ededed;
-    padding:5px 10px;;
-}
-header .right_menu li #product_name {
-    background:none;
-    width: 131px;
-    margin-right:10px;
-    font-size:0.814rem;
-}
-header .right_menu li:first-child a {}
-header .right_menu li:first-child a img {}
-/* 로그인 */
-header .right_menu li #login {
-    font-size:0.875rem;
-}
-header .right_menu li:nth-child(2)::after {
-    content: '|';
-    margin-left:17px;
-}
-/* 회원가입 */
-header .right_menu li #join {
-    font-size:0.875rem;
-}
-header .right_menu li:nth-child(3)::after {
-    content: '|';
-    margin-left:17px;
-}
-/* 장바구니 */
-header .right_menu li:last-child {margin-right:0;}
-header .right_menu li #cart {
-    display:flex;
-    align-items:center;
-}
-header .right_menu li #cart span {}
-header .right_menu li #cart img {margin-left:5px;}
-/* -----------------------------------------header end */
+/* 잠깐만 가리고 지울거 */
+main {display:none;}
+
 
 /* -----------------------------------------main start */
 /* ------------------------1행*/
@@ -435,27 +359,3 @@ main .event .container .swiper .swiper-wrapper:last-child {margin-right: 70px;/*
 #story .wrap a .txt p:nth-of-type(1) {margin-bottom:10px; color:#fff;}
 #story .wrap a .txt p:nth-of-type(2) {color:rgba(255, 255, 255, 0.6); text-decoration: underline;}
 /* -----------------------------------------main end */
-
-
-/* -----------------------------------------footer start */
-footer {display:flex; justify-content:space-between; padding:60px 70px; background:#F9F9F9;}
-/* 왼쪽 */
-footer .left {width:433px;}
-footer .left .user-info {margin-bottom:25px;}
-footer .left .user-info h5 {font-weight:600; margin-bottom:10px;}
-footer .left .user-info p {line-height:1.7; font-size:0.75rem; font-weight:300;}
-footer .left .follow-us {}
-footer .left .follow-us h5 {font-weight:600; margin-bottom:10px;}
-footer .left .follow-us a {margin-right:13px;}
-footer .left .follow-us a img {}
-/* 센터 */
-footer .center {width:972px; display:flex; justify-content:space-between; margin:0 100px;}
-footer .center li {display:flex; flex-flow: column nowrap;}
-footer .center li h5 {font-weight:600;  margin-bottom:23px;}
-footer .center li a {font-size:0.875rem; margin-bottom:16px;}
-/* 오른쪽 */
-footer .right {display:flex; flex-flow: column nowrap; justify-content: right;}
-footer .right h5 {font-weight:600;}
-footer .right #google-play {height:55px; margin:10px 0;}
-footer .right #app-store {height:55px;}
-/* -----------------------------------------footer end */
