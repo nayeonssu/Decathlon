@@ -483,7 +483,7 @@ main .event .container .swiper .swiper-wrapper:last-child {margin-right: 70px;/*
 /* -----------------------------------------main end */
 
 /* -----------------------------------------footer start */
-footer {display:flex; justify-content:space-between; padding:60px 70px; background:#F9F9F9; display:none;}
+footer {display:flex; justify-content:space-between; padding:60px 70px; background:#F9F9F9;}
 /* 왼쪽 */
 footer .left {width:433px;}
 footer .left .user-info {margin-bottom:25px;}
