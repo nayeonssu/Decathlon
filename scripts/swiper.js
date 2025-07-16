@@ -17,31 +17,31 @@ const bestSwiper = new Swiper('#best',{
 /* 2행,6행,7행 스와이퍼 */
 const manSwiper = new Swiper('.man_swiper', {
     slidesPerView:'auto',
-    spaceBetween:15,
+    spaceBetween:16,
     centeredSlides: false,
     slidesOffsetLeft: 70,
 })
 const girlSwiper = new Swiper('.girl_swiper', {
     slidesPerView:'auto',
-    spaceBetween:15,
+    spaceBetween:16,
     centeredSlides: false,
     slidesOffsetLeft: 70,
 })
 const kidsSwiper = new Swiper('.kids_swiper', {
     slidesPerView:'auto',
-    spaceBetween:15,
+    spaceBetween:16,
     centeredSlides: false,
     slidesOffsetLeft: 70,
 })
 const sportsSwiper = new Swiper('.sports_swiper', {
     slidesPerView:'auto',
-    spaceBetween:15,
+    spaceBetween:16,
     centeredSlides: false,
     slidesOffsetLeft: 70,
 })
 const ectiSwiper = new Swiper('.ecti_swiper', {
     slidesPerView:4,
-    spaceBetween:15,
+    spaceBetween:16,
     centeredSlides: false,
     loop:true,
     autoplay:{delay:3000},

@@ -18,7 +18,7 @@ main {z-index: 1;}
 #tap-nav header {
     position:fixed;/* lnb_bg의 부모 위치 기준 설정 */
     width:100%; min-width:1200px; height:76px;
-    padding:0 60px;
+    padding:0 70px;
     z-index:900;/* -1 ~ 999 단위없고 중첩순서만 결정하는 position 선택속성 */
     /* container(header) item(h1, nav, right_menu) */
     display:flex;
@@ -32,16 +32,15 @@ main {z-index: 1;}
 #tap-nav header h1 a img {}
 #tap-nav header nav {}
 #tap-nav header nav .gnb {
-    display:flex; flex-flow:row nowrap;
+    display:flex; flex-flow:row nowrap; gap:50px;
 }
-#tap-nav header nav .gnb > li {/* margin:0 25px; */ text-align: center;}
+#tap-nav header nav .gnb > li {text-align: center;}
 #tap-nav header nav .gnb > li > a {
-    width:80px;
     height:76px; display:block; line-height:76px;
     font-size: 1.125rem;
     font-weight: 600;
 }
-#tap-nav header nav .gnb > li > a:hover {border-bottom:1px solid #000;}
+#tap-nav header nav .gnb > li > a:hover {border-bottom:1px solid #3642B8; color:#3642B8;}
 /* ===============================서브메뉴 company,ir*/
 #tap-nav header nav .gnb > li:hover .lnb_bg {
     display:block;
@@ -138,21 +137,27 @@ main {z-index: 1;}
     justify-content:center;/* 세로중앙 정렬 */
     align-items:center;/* 가로중앙 정렬 */
 }
+#best .swiper-wrapper .swiper-slide h2 ~ p {color:#fff;}
 #best .swiper-wrapper .swiper-slide h2 {
+    color:#fff;
     font-weight:700;
     font-size:2.813rem;
-    margin:16px;
+    margin-bottom:16px;
 }
 #best .swiper-wrapper .swiper-slide p {
     font-size:1.25rem;
+    font-weight:500;
 }
-#best .swiper-wrapper .swiper-slide img {
-    margin-top:88px;
+#best .swiper-wrapper .swiper-slide .btn {
+    font-size:1.25rem;
+    padding:13px 40px;
+    border:1px solid #fff;
+    margin-top: 60px;
 }
-#best .swiper-wrapper .ad1 {background:url(../images/img_ad_001.png);}
+#best .swiper-wrapper .ad1 {background:url(../images/img_ad_001.jpg);}
 #best .swiper-wrapper .ad2 {background:url(../images/img_ad_002.jpg);}
-#best .swiper-wrapper .ad3 {background-color:pink;}
-#best .swiper-wrapper .ad4 {background-color:green;}
+#best .swiper-wrapper .ad3 {background:url(../images/img_ad_003.jpg);}
+#best .swiper-wrapper .ad4 {background:url(../images/img_ad_004.jpg);}
 /* 화살표 좌 우 방향 작성 */
 #best .swiper-button-prev {background:url(../images/icon_left.png);}
 #best .swiper-button-next {background:url(../images/icon_right.png);}
@@ -183,13 +188,13 @@ h3 {font-size:2.375rem; font-weight:700;}
     width:100%;
     height:1px;
     background-color:#000;
-    display:none;
-    transform:scaleX(1);
-    transition: transform 0.3s ease;
+    /* display:none; -> 넣으면 transform속성이 안들어간다 */ 
+    transform: scaleX(0);/* scale을 0으로 dislplay:none을 대신한다. */
+    transform-origin:center;
+    transition: transform 0.15s ease;
 }
 .category .gender:hover::after {
-    display: block;
-    transform:scaleX(1);
+    transform: scaleX(1);
 }
 /* more버튼 영역 */
 .more {
@@ -200,8 +205,14 @@ h3 {font-size:2.375rem; font-weight:700;}
     font-size:0.938rem;
     display:inline-block;
 }
-.more:hover {background:#000; color:#fff;}
-.event .left .more:hover {background:#fff; color:#000;}
+.more:hover {
+    background:#000; color:#fff;
+    transition: all 0.3s ease;
+}
+.event .left .more:hover {
+    background:#fff; color:#000;
+    transition: all 0.3s ease;
+}
 
 .category .man {}
 .category .girl {}
@@ -211,7 +222,7 @@ h3 {font-size:2.375rem; font-weight:700;}
 .container {}
 
 /* 보이는 공통 영역 */
-.container .swiper {/* 보이는 영역 */}
+.container .swiper {/* 보이는 영역 */ display:none;}
 
 /* 보이는 개별 영역 */
 .container .man_swiper {/* 보이는 영역 */}
@@ -286,6 +297,7 @@ h3 {font-size:2.375rem; font-weight:700;}
 .container .swiper .swiper-wrapper .swiper-slide .pd_img .colors .purple {background-color: #7C3380;}
 .container .swiper .swiper-wrapper .swiper-slide .pd_img .colors .pink {background-color: #E30076;}
 .container .swiper .swiper-wrapper .swiper-slide .pd_img .colors .beige {background-color: #C9C0AA;}
+.container .swiper .swiper-wrapper .swiper-slide .pd_img .colors .brown {background-color: #56332A;}
 
 /* 장바구니 버튼 */
 .container .swiper .swiper-wrapper .swiper-slide .pd_img .cart-btn {
@@ -346,8 +358,10 @@ h3 {font-size:2.375rem; font-weight:700;}
     margin:100px 0;
     padding:90px 0;
 }
-.event .left {margin-left:180px;
-display:flex; flex-flow:column nowrap; justify-content:space-between;}
+.event .left {
+    margin-left:180px;
+    display:flex; flex-flow:column nowrap; justify-content:space-between;
+}
 .event .left .top {width:212px;}
 .event .left .top h3 {line-height:1.5; color:#fff;}
 .event .left .top .category {justify-content:left; gap:30px;}
@@ -416,12 +430,27 @@ main .event .container .swiper .swiper-wrapper:last-child {margin-right: 70px;/*
 #ectivity .swiper .swiper-wrapper .swiper-slide {display:flex; flex-flow: column nowrap;}
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img {position: relative; width:400px; height:400px; margin-bottom:20px;}
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img a {}
+#ectivity .swiper .swiper-wrapper .swiper-slide .select_img a::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+#ectivity .swiper .swiper-wrapper .swiper-slide .select_img a:hover::before {
+    opacity:1;
+}
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img img {
     width: 100%;
     height: auto;
     display: block;
 }
-#ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt {position:absolute; left:27px; bottom: 27px;}
+#ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt {
+    position:absolute; left:27px; bottom: 27px;
+    z-index: 100;
+}
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt p:nth-of-type(1) {font-size:1.875rem; font-weight:700; color:#fff; margin-bottom:10px;}
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt p:nth-of-type(2) {color:#fff; text-decoration: underline; font-size:0.875rem;}
 
@@ -470,14 +499,27 @@ main .event .container .swiper .swiper-wrapper:last-child {margin-right: 70px;/*
 #ectivity .swiper .swiper-wrapper .slide6 {}
 
 /* -----------------------9행 */
-#story {margin:80px 0;}
-#story .wrap {display:flex; justify-content:center; gap:15px;}
+#story {padding:80px 0; background-color: #3743BB;}
+#story .wrap {display:flex; justify-content:center; gap:16px;}
 #story .wrap a {width:346px; height:155px; background:green; position:relative;}
+#story .wrap a::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* 기본은 거의 투명 */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+#story .wrap a:hover::before {opacity: 1;}
 #story .wrap a:nth-child(1) {background:url(../images/img_story_001.jpg);}
 #story .wrap a:nth-child(2) {background:url(../images/img_story_002.jpg);}
 #story .wrap a:nth-child(3) {background:url(../images/img_story_003.jpg);}
 #story .wrap a:nth-child(4) {background:url(../images/img_story_004.jpg);}
-#story .wrap a .txt {position:absolute; left:27px; bottom:25px;}
+#story .wrap a .txt {
+    position:absolute; left:27px; bottom:25px;
+    z-index:100;
+}
 #story .wrap a .txt p:nth-of-type(1) {margin-bottom:10px; color:#fff;}
 #story .wrap a .txt p:nth-of-type(2) {color:rgba(255, 255, 255, 0.6); text-decoration: underline;}
 /* -----------------------------------------main end */
