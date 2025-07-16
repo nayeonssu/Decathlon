@@ -430,19 +430,7 @@ main .event .container .swiper .swiper-wrapper:last-child {margin-right: 70px;/*
 #ectivity .swiper .swiper-wrapper .swiper-slide {display:flex; flex-flow: column nowrap;}
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img {position: relative; width:400px; height:400px; margin-bottom:20px;}
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img a {}
-#ectivity .swiper .swiper-wrapper .swiper-slide .select_img a::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-}
-#ectivity .swiper .swiper-wrapper .swiper-slide .select_img a:hover::before {
-    opacity:1;
-}
-#ectivity .swiper .swiper-wrapper .swiper-slide .select_img img {
+#ectivity .swiper .swiper-wrapper .swiper-slide .select_img a img {
     width: 100%;
     height: auto;
     display: block;
@@ -452,7 +440,7 @@ main .event .container .swiper .swiper-wrapper:last-child {margin-right: 70px;/*
     z-index: 100;
 }
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt p:nth-of-type(1) {font-size:1.875rem; font-weight:700; color:#fff; margin-bottom:10px;}
-#ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt p:nth-of-type(2) {color:#fff; text-decoration: underline; font-size:0.875rem;}
+#ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt p:nth-of-type(2) {color:#fff; text-decoration: underline; font-size:0.875rem; cursor: pointer;}
 
 
 #ectivity .swiper .swiper-wrapper .swiper-slide .product {}
