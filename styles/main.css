@@ -270,7 +270,7 @@ h3 {font-size:2.375rem; font-weight:700;}
 }
 .container .swiper .swiper-wrapper .swiper-slide .pd_img a{}
 .container .swiper .swiper-wrapper .swiper-slide .pd_img a img {
-    width:100%;
+    
 }
 
 /* 컬러 그룹 */
@@ -428,12 +428,18 @@ main .event .container .swiper .swiper-wrapper:last-child {margin-right: 70px;/*
 #ectivity .swiper .swiper-wrapper {}
 /* 제품 공통 영역 */
 #ectivity .swiper .swiper-wrapper .swiper-slide {display:flex; flex-flow: column nowrap;}
-#ectivity .swiper .swiper-wrapper .swiper-slide .select_img {position: relative; width:400px; height:400px; margin-bottom:20px;}
-#ectivity .swiper .swiper-wrapper .swiper-slide .select_img a {}
-#ectivity .swiper .swiper-wrapper .swiper-slide .select_img a img {
-    width: 100%;
-    height: auto;
+#ectivity .swiper .swiper-wrapper .swiper-slide .select_img {position: relative; width:400px; height:400px; margin-bottom:20px;  overflow: hidden;}
+#ectivity .swiper .swiper-wrapper .swiper-slide .select_img a {
     display: block;
+    width: 100%;
+    height: 100%;
+}
+#ectivity .swiper .swiper-wrapper .swiper-slide .select_img a img {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+#ectivity .swiper .swiper-wrapper .swiper-slide .select_img a img:hover {
+    transform: scale(1.1);
 }
 #ectivity .swiper .swiper-wrapper .swiper-slide .select_img .txt {
     position:absolute; left:27px; bottom: 27px;
