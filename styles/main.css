@@ -20,7 +20,6 @@ main {z-index: 1;}
     width:100%; min-width:1200px; height:76px;
     padding:0 70px;
     z-index:900;/* -1 ~ 999 단위없고 중첩순서만 결정하는 position 선택속성 */
-    /* container(header) item(h1, nav, right_menu) */
     display:flex;
     flex-flow:row nowrap;/* 방향과 줄바꿈 */
     justify-content:space-between;/* 메인축의 정렬방법 */ /* figma의 auto같은 느낌 */
