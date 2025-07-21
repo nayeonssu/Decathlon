@@ -127,7 +127,7 @@ main {z-index: 1;}
 
 /* -----------------------------------------main start */
 /* ------------------------1행*/
-#ad {position:relative; margin:0 70px;}
+main #ad {position:relative; margin:0 70px; padding-top:76px;}
 #best {width:100%; height:768px;}
 #best .swiper-wrapper {}
 #best .swiper-wrapper .swiper-slide {
