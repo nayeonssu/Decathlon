@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!section) return;
 
     const buttons = section.querySelectorAll(".category .gender");
+    const sportsButtons = section.querySelectorAll(".category .sports");
     const swipers = section.querySelectorAll(".swiper"); // <-- 중요
 
     if (!buttons.length || !swipers.length) return;
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         swipers.forEach(swiper => swiper.style.display = "none");
 
         const type = [...btn.classList].find(cls =>
-          ["man", "girl", "kids", "sports"].includes(cls)
+          ["man", "girl", "kids"].includes(cls)
         );
 
         const targetSwiper = section.querySelector(`.${type}_swiper`);
@@ -31,3 +32,5 @@ document.addEventListener("DOMContentLoaded", function () {
     buttons[0].click();
   });
 });
+
+/* category중n을 클릭 했을 때 container중 n이 나타난다 만약다르다면 보이지 않게 한다. */
