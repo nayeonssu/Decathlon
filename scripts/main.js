@@ -34,3 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* category중n을 클릭 했을 때 container중 n이 나타난다 만약다르다면 보이지 않게 한다. */
+/* ifelse문을 사용 */
