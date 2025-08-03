@@ -66,6 +66,7 @@ h2 {
 .container .swiper .swiper-wrapper .swiper-slide:first-child {}
 .container .swiper .swiper-wrapper .swiper-slide {width:400px;}
 
+<<<<<<< HEAD
 .container .swiper .swiper-wrapper .swiper-slide .pd_img {
     position:relative;
     margin-bottom:15px
@@ -128,6 +129,12 @@ h2 {
 /* ----------------------------------------------------------------------1행 */
 #ad {position:relative; padding:64px 0 0;}
 #best {width:100%; height:745px;}
+=======
+/* -----------------------------------------main start */
+/* ------------------------1행*/
+main #ad {position:relative; margin:0 70px; padding-top:76px;}
+#best {width:100%; height:768px;}
+>>>>>>> 7183b5923d987ccc9ecd3cf68766b3dc1666901e
 #best .swiper-wrapper {}
 #best .swiper-wrapper .swiper-slide {
     display:flex;
