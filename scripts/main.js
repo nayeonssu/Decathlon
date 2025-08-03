@@ -1,37 +1,28 @@
 /* main.js */
 
+//man ,girl, kids쪽
+/* document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".category .tap");
+  const swipers = document.querySelectorAll(".container .swiper");
 
-/* 버튼을 눌렀을때 제품 보이게하기 */
-document.addEventListener("DOMContentLoaded", function () {
-  const targetIds = ["new", "brand", "kids", "sale", "season", "sportsset"];
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const selectedClass = button.classList[1]; // man, girl, kids 중 하나
 
-  targetIds.forEach(id => {
-    const section = document.getElementById(id);
-    if (!section) return;
-
-    const buttons = section.querySelectorAll(".category .gender");
-    const sportsButtons = section.querySelectorAll(".category .sports");
-    const swipers = section.querySelectorAll(".swiper"); // <-- 중요
-
-    if (!buttons.length || !swipers.length) return;
-
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        swipers.forEach(swiper => swiper.style.display = "none");
-
-        const type = [...btn.classList].find(cls =>
-          ["man", "girl", "kids"].includes(cls)
-        );
-
-        const targetSwiper = section.querySelector(`.${type}_swiper`);
-        if (targetSwiper) targetSwiper.style.display = "block";
+      swipers.forEach(swiper => {
+        // 해당하는 swiper만 보여주고 나머지는 숨김
+        if (swiper.classList.contains(`${selectedClass}_swiper`)) {
+          swiper.style.display = "block";
+        } else {
+          swiper.style.display = "none";
+        }
       });
     });
+  });
+}); */
 
-    // 기본: 첫 번째 버튼 클릭
-    buttons[0].click();
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();/* 맨 위로 올라가는 이동 막음 */
   });
 });
-
-/* category중n을 클릭 했을 때 container중 n이 나타난다 만약다르다면 보이지 않게 한다. */
-/* ifelse문을 사용한다 */

@@ -25,12 +25,17 @@ const snsSwiper = new Swiper('.sns_swiper', {
     slidesPerView:4,
     spaceBetween:20,
     centeredSlides: false,
-    loop:true,
+    loop:false,
     autoplay:{delay:3000},
     direction:'horizontal',
 })
 
 const ectiSwiper = new Swiper('.ecti_swiper', {
-    slidesPerView:4,
+    slidesPerView:'auto',
     centeredSlides: false,
+    spaceBetween:16,
+    initialSlide: 1,
+    loop:true,
+    autoplay:{delay:3000},
+    direction:'horizontal',
 })

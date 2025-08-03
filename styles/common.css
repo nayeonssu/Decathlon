@@ -77,15 +77,17 @@
     margin-right:17px;
 }
 /* 검색 */
-#tap-nav header .right_menu li:first-child {
+#tap-nav header .right_menu li:nth-child(1) {
+    width:176px;
     background:#ededed;
-    padding:5px 10px;;
+    padding:5px 5px 5px 13px;
 }
 #tap-nav header .right_menu li #product_name {
+    width:100%;
     background:none;
-    width: 131px;
+    font-size:0.813rem;
+    line-height:13px;
     margin-right:10px;
-    font-size:0.814rem;
 }
 #tap-nav header .right_menu li:first-child a {}
 #tap-nav header .right_menu li:first-child a img {}
@@ -111,7 +113,7 @@
     display:flex;
     align-items:center;
 }
-#tap-nav header .right_menu li #cart span {}
+#tap-nav header .right_menu li #cart span {font-size:0.875rem;}
 #tap-nav header .right_menu li #cart img {margin-left:5px;}
 
 /* ====================================================================================header e */
