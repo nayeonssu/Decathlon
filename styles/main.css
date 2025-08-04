@@ -65,8 +65,11 @@ h2 {
 .container {}
 .container .swiper {}
 .container .swiper .swiper-wrapper {}
-.container .swiper .swiper-wrapper .swiper-slide:first-child {}
 .container .swiper .swiper-wrapper .swiper-slide {width:400px;}
+
+/* 첫번째 swiper-slide margin값 추가 | .event의 margin값은 0 */
+.container .swiper .swiper-wrapper .swiper-slide:first-child {margin-left:70px;}
+.event .container .swiper .swiper-wrapper .swiper-slide:first-child {margin-left:0px;}
 
 .container .swiper .swiper-wrapper .swiper-slide .pd_img {
     position:relative;

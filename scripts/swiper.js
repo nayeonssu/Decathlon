@@ -21,6 +21,7 @@ const manSwiper = new Swiper('.container .swiper', {
     centeredSlides: false,
 })
 
+/* sns스와이퍼 */
 const snsSwiper = new Swiper('.sns_swiper', {
     slidesPerView:4,
     spaceBetween:20,
@@ -30,6 +31,7 @@ const snsSwiper = new Swiper('.sns_swiper', {
     direction:'horizontal',
 })
 
+/* 엑티비티 스와이퍼 */
 const ectiSwiper = new Swiper('.ecti_swiper', {
     slidesPerView:'auto',
     centeredSlides: false,
