@@ -21,8 +21,11 @@
   });
 }); */
 
-document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();/* 맨 위로 올라가는 이동 막음 */
-  });
+document.querySelectorAll("a")
+
+forEach((a) => {
+    a.addEventListener("click", (e) => {
+        if (a.getAttribute("href") == "#") {e.preventDefault();}
+        /* a의 주소가 #과 같다면 이동을 막는다 */
+    });
 });
