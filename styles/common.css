@@ -26,14 +26,31 @@
 #tap-nav header nav .gnb {
     display:flex; flex-flow:row nowrap; gap:50px;
 }
-#tap-nav header nav .gnb > li {text-align: center;}
+#tap-nav header nav .gnb > li {text-align: center; position:relative;}
 #tap-nav header nav .gnb > li > a {
     display:block;
     height:64px; line-height:64px;
     font-size: 1.125rem;
     font-weight: 500;
 }
-#tap-nav header nav .gnb > li > a:hover {border-bottom:1px solid #3642B8; color:#3642B8;}
+#tap-nav header nav .gnb > li > a:hover {color: #3642B8;}
+#tap-nav header nav .gnb > li > a::after {
+    content: "";/* 가짜속성에서 보일려면 무조건 필요함 */
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:1px;
+    background-color:#3642B8;
+    /* display:none; -> 넣으면 transform속성이 안들어간다 */
+    transform: scaleX(0);/* scale을 0으로 dislplay:none을 대신한다. */
+    transform-origin:center;
+    transition: transform 0.15s ease;
+}
+#tap-nav header nav .gnb > li > a:hover::after {
+    /* border-bottom:1px solid #3642B8; color:#3642B8; */
+    transform: scaleX(1);
+}
 /* ===============================서브메뉴 company,ir*/
 #tap-nav header nav .gnb > li:hover .lnb_bg {
     display:block;

@@ -1,31 +1,29 @@
-/* main.js */
 
-//man ,girl, kids쪽
-/* document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".category .tap");
-  const swipers = document.querySelectorAll(".container .swiper");
+/* 모든 a태그의 주소가 #일때 이동을 막는다. */
+const links = document.querySelectorAll("a");
 
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      const selectedClass = button.classList[1]; // man, girl, kids 중 하나
-
-      swipers.forEach(swiper => {
-        // 해당하는 swiper만 보여주고 나머지는 숨김
-        if (swiper.classList.contains(`${selectedClass}_swiper`)) {
-          swiper.style.display = "block";
-        } else {
-          swiper.style.display = "none";
-        }
-      });
-    });
+links.forEach((a) => {
+  a.addEventListener("click", (e) => {
+    if (a.getAttribute("href") == "#") {
+      e.preventDefault();
+    }
   });
-}); */
+});
 
-document.querySelectorAll("a")
+/* man, girl, kids 탭 */
+const buttons = document.querySelectorAll('.tap');/* 모든 공통class이름이 tap */
+const swipers = document.querySelectorAll('.swiper');/* 모든 공통class이름이 swiper */
 
-forEach((a) => {
-    a.addEventListener("click", (e) => {
-        if (a.getAttribute("href") == "#") {e.preventDefault();}
-        /* a의 주소가 #과 같다면 이동을 막는다 */
-    });
+// 공통클래스 tap중 n번째가 클릭되면 swiper의 n번째를 보여줘라
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    // 모든 콘텐츠 숨기기
+    swipers.forEach(swiper => swiper.style.display = 'none');
+    // 현재 인덱스에 해당하는 콘텐츠만 보이기
+    swipers[index].style.display = 'block';
+
+    // 선택된 버튼 강조
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+  });
 });
