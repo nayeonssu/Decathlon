@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품출력</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f7f9fc;
+        }
+        #summer-products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 250px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+            box-sizing: border-box;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .product-card h3 {
+            font-size: 1.1rem;
+            margin: 0 0 8px 0;
+            color: #333;
+        }
+        .product-card p.brand {
+            margin: 0 0 12px 0;
+            font-weight: 600;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .price {
+            font-size: 1rem;
+            color: #111;
+            font-weight: 700;
+        }
+        .price del {
+            color: #999;
+            font-weight: 400;
+            margin-left: 10px;
+        }
+        .sale {
+            color: #d33;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Summer Products</h1>
+    <div id="summer-products"></div>
+
+    <script>
+        const products = [
+            {
+            image: './img_new_001.jpg',
+            brand: 'DECATHLON',
+            name: '남성 러닝 반팔 티 런 드라이 100',
+            price: 9900,
+            originalPrice: 12900,
+            salePercent: 23,
+            category: ['summer', 'running']
+            },
+            {
+            image: './img_new_002.jpg',
+            brand: 'DECATHLON',
+            name: '여성 요가 팬츠 컴포트',
+            price: 14900,
+            category: ['summer', 'yoga']
+            },
+            {
+            image: './img_new_003.jpg',
+            brand: 'DECATHLON',
+            name: '트레이닝 슈즈 FIT TRAIN',
+            price: 29900,
+            originalPrice: 39900,
+            salePercent: 25,
+            category: ['training']
+            },
+            {
+            image: './img_new_004.jpg',
+            brand: 'DECATHLON',
+            name: '여성 반팔 티셔츠 500',
+            price: 10900,
+            originalPrice: 13900,
+            salePercent: 21,
+            category: ['summer', 'fitness']
+            },
+            {
+            image: './img_new_005.jpg',
+            brand: 'DECATHLON',
+            name: '통기성 좋은 스포츠 캡',
+            price: 5900,
+            originalPrice: 7900,
+            salePercent: 25,
+            category: ['summer', 'accessory']
+            },
+            {
+            image: './img_new_006.jpg',
+            brand: 'DECATHLON',
+            name: '초경량 스포츠 타월',
+            price: 4900,
+            category: ['summer', 'accessory']
+            }
+        ];
+
+        // summer 카테고리인 것만 필터링
+        const summerItems = products.filter(product => product.category.includes('summer'));
+
+        // 최대 4개까지만 화면에 보이도록 한다.
+        const limitedItems = summerItems.slice(0, 4);
+
+        //html의 id가 summer-products인 요소를 부른다.
+        const container = document.getElementById('summer-products');
+
+        limitedItems.forEach(product => {
+            //기본값으로 original과 sale의 값을 없앤다.
+            let original = '';
+            let sale = '';
+
+            //만약 DB에 originalPrice가 있다면 1000단위로 쉼표를 찍으면서 보여줘라
+            if (product.originalPrice) {
+            original = `<del>₩${product.originalPrice.toLocaleString()}</del>`;
+            }
+
+            //만약 DB에 originalPrice가 있다면 ???%로 보여줘라
+            if (product.salePercent) {
+            sale = `<span class="sale">-${product.salePercent}%</span>`;
+            }
+
+            //자바스크립트에서 작성하는 html구조 -> 위에서 forEach(반복문)을 활용해서 html도 제품1개의 디자인정도만 작성하면된다.
+            //<div id="summer-products"></div> 여기에 들어간다.
+            container.innerHTML += `
+            <div class="product-card">
+                <img src="${product.image}" alt="${product.name}" />
+                <h3>${product.name}</h3>
+                <p class="brand">${product.brand}</p>
+                <p class="price">₩${product.price.toLocaleString()} ${original} ${sale}</p>
+            </div>
+            `;
+        });
+</script>
+</body>
+</html>
