@@ -11,12 +11,13 @@
             padding: 20px;
             background: #f7f9fc;
         }
-        #summer-products {
+        .swiper-wrapper {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
-        .product-card {
+        .swiper-slide {
+            position: relative;
             background: white;
             border: 1px solid #ddd;
             border-radius: 10px;
@@ -25,17 +26,35 @@
             box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
             box-sizing: border-box;
         }
-        .product-card img {
+        .badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 7px 15px;
+            font-size: 0.813rem;
+            color: white;
+            z-index: 10;
+            
+        }
+        .badge-new {
+            background: #3642B8;
+            color:#fff;
+        }
+        .badge-sale {
+            background: #E63946;
+            color:#fff;
+        }
+        .swiper-slide img {
             width: 100%;
             border-radius: 8px;
             margin-bottom: 12px;
         }
-        .product-card h3 {
+        .swiper-slide h3 {
             font-size: 1.1rem;
             margin: 0 0 8px 0;
             color: #333;
         }
-        .product-card p.brand {
+        .swiper-slide p.brand {
             margin: 0 0 12px 0;
             font-weight: 600;
             color: #666;
@@ -60,7 +79,8 @@
 </head>
 <body>
     <h1>Summer Products</h1>
-    <div id="summer-products"></div>
+    <div class="swiper-wrapper"></div>
+    <!-- <div id="summer-products"></div> -->
 
     <script>
         const products = [
@@ -71,14 +91,16 @@
             price: 9900,
             originalPrice: 12900,
             salePercent: 23,
-            category: ['summer', 'running']
+            category: ['summer', 'running'],
+            Badge: 'NEW',
             },
             {
             image: './img_new_002.jpg',
             brand: 'DECATHLON',
             name: '여성 요가 팬츠 컴포트',
             price: 14900,
-            category: ['summer', 'yoga']
+            category: ['summer', 'yoga'],
+            Badge: 'SALE',
             },
             {
             image: './img_new_003.jpg',
@@ -87,7 +109,7 @@
             price: 29900,
             originalPrice: 39900,
             salePercent: 25,
-            category: ['training']
+            category: ['training'],
             },
             {
             image: './img_new_004.jpg',
@@ -96,7 +118,8 @@
             price: 10900,
             originalPrice: 13900,
             salePercent: 21,
-            category: ['summer', 'fitness']
+            category: ['summer', 'fitness'],
+            Badge: 'NEW',
             },
             {
             image: './img_new_005.jpg',
@@ -123,34 +146,42 @@
         const limitedItems = summerItems.slice(0, 4);
 
         //html의 id가 summer-products인 요소를 부른다.
-        const container = document.getElementById('summer-products');
+        /* const container = document.getElementById('summer-products'); */
+        const container = document.querySelector('.swiper-wrapper');
 
         limitedItems.forEach(product => {
             //기본값으로 original과 sale의 값을 없앤다.
             let original = '';
             let sale = '';
+            let moreBadge = '';
 
             //만약 DB에 originalPrice가 있다면 1000단위로 쉼표를 찍으면서 보여줘라
             if (product.originalPrice) {
-            original = `<del>₩${product.originalPrice.toLocaleString()}</del>`;
+                original = `<del>₩${product.originalPrice.toLocaleString()}</del>`;
             }
 
             //만약 DB에 originalPrice가 있다면 ???%로 보여줘라
             if (product.salePercent) {
-            sale = `<span class="sale">-${product.salePercent}%</span>`;
+                sale = `<span class="sale">${product.salePercent}%</span>`;
             }
+
+            if (product.Badge) {
+                moreBadge = `<span class="badge badge-${product.Badge.toLowerCase()}">${product.Badge}</span>`;
+            }
+
 
             //자바스크립트에서 작성하는 html구조 -> 위에서 forEach(반복문)을 활용해서 html도 제품1개의 디자인정도만 작성하면된다.
             //<div id="summer-products"></div> 여기에 들어간다.
             container.innerHTML += `
-            <div class="product-card">
+            <div class="swiper-slide">
                 <img src="${product.image}" alt="${product.name}" />
+                ${moreBadge}
                 <h3>${product.name}</h3>
                 <p class="brand">${product.brand}</p>
                 <p class="price">₩${product.price.toLocaleString()} ${original} ${sale}</p>
             </div>
             `;
         });
-</script>
+    </script>
 </body>
 </html>
